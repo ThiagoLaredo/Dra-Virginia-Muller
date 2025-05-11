@@ -1,0 +1,32 @@
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    text-align: center;
+    color: rgba(19, 180, 238, 1);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+  }
+  
+  .cta-button:hover {
+    background: rgba(19, 180, 238, 1);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .cta-button.azul {
+    background: rgba(19, 180, 238, 1);
+    color: white;
+  }
+  
+  .cta-button.azul:hover {
+    background: #fff;
+    color: rgba(19, 180, 238, 1);
+  }
