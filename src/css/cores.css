@@ -1,46 +1,25 @@
 :root {
-  --textwhite: #FAFAFA;
-  --text: #28302E;
-  --bg-branco: #fff;
-  --primary: #6751D1;
-  --secondary: #13B4EE;
-  --bgroxo: #d3cbff;
-  --primary-rgb: 103, 81, 209; /* Valores RGB da cor primária */
-  --secondary-rgb: 19, 180, 238; /* Valores RGB da cor secundária */
-  --textwhite-rgb: 250, 250, 250; /* Exemplo de valores RGB para branco */
-  --text-rgb: 0, 0, 0; /* Exemplo de valores RGB para branco */
-  --degradeazul: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
-}
+  /* Cores principais */
+  --primary: #F47216;
+  --primary-rgb: 244, 114, 22;
 
-.textwhite {
-  color: var(--textwhite);
-}
+  --secondary: #1C2C3A; /* azul petróleo escuro */
+  --secondary-rgb: 28, 44, 58;
 
-.text {
-  color: var(--text);
-}
-.bg {
-  background-color: var(--bg);
-}
-.bg-escuro {
-  background-color: var(--bg-branco);
-}
+  /* Texto */
+  --darktext: #1E1E1E;
+  --darktext-rgb: 30, 30, 30;
 
-.bg-roxo {
-  background-color: var(--bgroxo);
+  --lighttext: #FFFFFF;
+  --lighttext-rgb: 255, 255, 255;
+
+  /* Fundos */
+  --bg-light: #FAFAFA;
+  --bg-soft: #F2F2F2;
+  --bg-dark: #121212;
+
+  /* Sombras */
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-
-.degradeazul {
-  background: var(--degradeazul);
-}
-
-.primary {
-  color: var(--primary);
-}
-
-.secondary {
-  color: var(--secondary);
-}
-
-
-

@@ -15,6 +15,17 @@
   display: flex;
 }
 
+[data-menu="logo"] {
+  display: inline-block; /* ou block/flex se preferir */
+}
+
+[data-menu="logo"] img {
+  display: block;         /* remove o espaço "fantasma" */
+  max-width: 100%;
+  height: auto;
+}
+
+
 @media (max-width: 768px) {
   /* Ajustes gerais */
 
@@ -36,7 +47,7 @@
 } 
 
   [data-menu="logo"] {
-    width: 150px;
+    width: 100%;
     z-index: 999;
   }
 
@@ -60,7 +71,7 @@
   /* Botão hamburguer */
   .js [data-menu="button"] {
     display: flex;
-    background: radial-gradient(circle, rgba(19, 180, 238, 1) 0%, rgba(45, 248, 250, 1) 100%);
+    background: var(--primary);
     border: none;
     padding: 0.6rem; 
     border-radius: 50%; 
@@ -80,7 +91,7 @@
   #hamburguer {
     width: 30px;
     height: 2px;
-    background: var(--textwhite);
+    background: white;
     border-radius: 1px;
     position: relative;
     transition: background 0.3s ease; 
@@ -92,7 +103,7 @@
     display: block;
     width: 30px;
     height: 2px;
-    background: var(--textwhite);
+    background: white;
     border-radius: 1px;
     position: absolute;
     left: 0;
