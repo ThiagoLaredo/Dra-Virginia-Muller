@@ -1,32 +1,76 @@
-.cta-button {
-    display: inline-block;
-    background: #fff;
-    text-align: center;
-    color: rgba(19, 180, 238, 1);
-    border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
-  }
-  
-  .cta-button:hover {
-    background: rgba(19, 180, 238, 1);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-  }
+/* Botões */
 
-  .cta-button.azul {
-    background: rgba(19, 180, 238, 1);
-    color: white;
-  }
-  
-  .cta-button.azul:hover {
-    background: #fff;
-    color: rgba(19, 180, 238, 1);
-  }
+/* Botões */
+.btn-agendar, .btn-saiba-mais, .btn-ver-todas {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.btn-agendar {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-agendar:hover {
+  background-color: #e06512;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.btn-saiba-mais, .btn-ver-todas {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.btn-saiba-mais:hover, .btn-ver-todas:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+/* Seções padrão */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+}
+
+/* Navbar, footer (se não estiverem no HTML principal) */
+/* ... */

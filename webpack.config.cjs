@@ -11,7 +11,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const PATHS = { src: path.join(__dirname, 'src') };
 
-const pages = ['index', 'sobre', 'creators', 'recursos', 'precos'];
+const pages = ['index'];
 
 const entryPoints = pages.reduce((entries, page) => {
   const jsPath = `./src/js/pages/${page}.js`;
@@ -133,18 +133,7 @@ module.exports = (env, argv) => {
           // Assets estáticos
           { from: 'src/imgs', to: 'imgs' },
           { from: 'src/videos', to: 'videos' },
-          { from: 'src/legendas.vtt', to: 'legendas.vtt' },
-          
-          // Font Awesome (ícones)
-          {
-            from: path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),
-            to: 'fonts',
-            filter: (resourcePath) => {
-              // Copia apenas os arquivos de fonte necessários
-              return /fa-(brands|solid|regular)-[0-9]+\.(woff2|woff|ttf)$/.test(path.basename(resourcePath));
-            }
-          },
-          
+                
           // Fontes Inter (principal, semibold e bold)
           {
             from: path.resolve(__dirname, 'node_modules/@fortawesome/fontawesome-free/webfonts'),

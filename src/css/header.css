@@ -1,166 +1,121 @@
-/* Geral */
-.header {
-  width: 100%;
-  z-index: 1000;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  /* opacity: 0; */
-  padding: 1rem 2rem;
-}
-
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.logo-svg {
-  display: block;
-  width: 100%; 
-  height: auto;
-  transition: width 0.3s ease-in-out;
-}
-
-/* header scroll */
-.header.header-scrolled  {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: transparent;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-} 
-
-.header_menu {
-  box-sizing: border-box;
-  height: 100%;
-  padding: .4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  gap: 4rem;
-}
-
-ul[data-menu="list"] {
-  display: flex;
-  list-style: none;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.menu li a,
-.menu li span {
-  font: 400 1rem/1.2 'Inter', sans-serif;
-  color: var(--text);
-  display: flex;
-  gap: 4px;
-  justify-content: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem; 
-  align-items: center;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
-}
-
-/* Sublinhado animado */
-.menu li a::after,
-.menu li span::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: 100%;
-  height: 2px;
-  background-color: var(--secondary);
-  transition: transform 0.3s ease;
-}
-
-/* Hover */
-.menu li a:hover,
-.menu li span:hover {
-  /* color: var(--secondary); */
-  transform: translateY(-2px);
-}
-
-.menu li a:hover::after,
-.menu li span:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
-
-.header_acoes {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.btn-login,
-.btn-cadastro {
-  padding: 0.6rem 1rem;
-  text-decoration: none;
-  border-radius: 16px; 
-  transition: background-color 0.3s, color 0.3s;
-  width: 120px;
-  text-align: center;
-}
-
-.btn-login {
-  border: 2px solid var(--primary); 
-  color: var(--primary);  
-}
-
-.btn-login:hover {
-  background-color: var(--primary); 
-  color: #fff;
-}
-
-.btn-cadastro {
-  background-color: var(--primary); 
-  border: 2px solid var(--primary); 
-  color: var(--bg-branco);  
-}
-
-.btn-cadastro:hover {
-  background-color: #7C68DC; 
-  border: 2px solid #7C68DC; 
-  color: #fff;
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .menu li a,
-:is(.page-precos, .page-recursos, .page-sobre) .menu li span {
-  color: var(--textwhite); /* ou var(--bg-branco) */
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .header-scrolled .menu li a {
-  color: var(--text);
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .btn-login {
-  color: var(--textwhite);
-  border: 2px solid var(--textwhite);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .header-scrolled .btn-login {
-  color: var(--text);
-  border: 2px solid var(--text);
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .btn-login:hover {
-  color: var(--primary);
-  background: white;
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .btn-cadastro {
-  background: var(--secondary);
-  border: 2px solid var(--secondary);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-:is(.page-precos, .page-recursos, .page-sobre) .btn-cadastro:hover {
-  background: #29C5FF;
-  border: 2px solid #29C5FF;
-}
+/* ======================
+   HEADER
+   ====================== */
+   .header {
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.98); /* Branco com leve transparência */
+    position: fixed;
+    top: 0;
+    padding: 1rem 2rem;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(28, 44, 58, 0.05); /* Borda sutil */
+  }
+  
+  .header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo */
+  .logo-svg {
+    display: block;
+    width: 180px; /* Tamanho ajustável */
+    height: auto;
+    transition: all 0.3s ease;
+  }
+  
+  /* Menu */
+  .header_menu {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  ul[data-menu="list"] {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    align-items: center;
+  }
+  
+  .menu li a,
+  .menu li span {
+    font: 500 1rem/1.2 'Montserrat', sans-serif; /* Fonte mais profissional */
+    color: var(--secondary); /* Azul petróleo */
+    text-decoration: none;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Sublinhado animado */
+  .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary); /* Laranja */
+    transition: width 0.3s ease;
+  }
+  
+  .menu li a:hover {
+    color: var(--primary); /* Laranja no hover */
+  }
+  
+  .menu li a:hover::after {
+    width: 100%;
+  }
+  
+  /* Botão Agendar */
+  .btn-agendar {
+    background-color: var(--primary); /* Laranja */
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-agendar:hover {
+    background-color: #e06512; /* Laranja mais escuro */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(244, 114, 22, 0.2);
+  }
+  
+  /* Efeito no scroll */
+  .header.header-scrolled {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .header-scrolled .logo-svg {
+    width: 160px; /* Logo reduz levemente */
+  }
+  
+  /* Responsivo */
+  @media (max-width: 992px) {
+    .header_menu {
+      gap: 1.5rem;
+    }
+    
+    ul[data-menu="list"] {
+      gap: 1rem;
+    }
+    
+    .btn-agendar {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }

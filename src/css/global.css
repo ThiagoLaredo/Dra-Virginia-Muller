@@ -1,82 +1,44 @@
-body, h1, h2, h3, h4, p, ul, li, a {
-  margin: 0;
-  padding: 0;
+/* Reset básico, variáveis CSS, estilos de base */
+:root {
+  /* Suas cores definidas */
+  --primary: #F47216;
+  --primary-rgb: 244, 114, 22;
+  --secondary: #1C2C3A;
+  --secondary-rgb: 28, 44, 58;
+  --darktext: #1E1E1E;
+  --darktext-rgb: 30, 30, 30;
+  --lighttext: #FFFFFF;
+  --lighttext-rgb: 255, 255, 255;
+  --bg-light: #FAFAFA;
+  --bg-soft: #F2F2F2;
+  --bg-dark: #121212;
+  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-/* h1, h2, h3, h4, p, ul, li, a {
-  will-change: opacity, transform;
-} */
-
-html, body {
-  /* height: 100%; */
+* {
   margin: 0;
   padding: 0;
-}
-
-button {
-  all: unset;
+  box-sizing: border-box;
 }
 
 body {
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: var(--darktext);
 }
 
-.swiper-slide {
-  user-select: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Adicione no seu CSS global ou no menu-mobile.css */
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
-}
-
-/* Garante que o menu não cause rolagem horizontal */
-.menu {
-  max-width: 100vw;
-  overflow: hidden;
-}
-
-/* Garante renderização suave */
-.page-open-animate,
-[data-menu],
-.header_acoes a {
-    will-change: opacity;
-    backface-visibility: hidden;
-}
-
-/* Reset inicial seguro */
-body.preload .page-open-animate,
-body.preload [data-menu],
-body.preload .header_acoes a {
-    opacity: 0 !important;
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
 }
 
 .container {
-  max-width: 1200px; /* Largura máxima do container */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  width: 100%; /* Faz o container ocupar toda a largura disponível */
-  padding: 0 1.25rem;
-  box-sizing: border-box; /* Inclui padding na largura total */
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-* {
-  box-sizing: border-box;
+  padding: 0 1.5rem;
 }
 
 .visually-hidden {
@@ -91,15 +53,7 @@ img {
   white-space: nowrap; /* Adiciona suporte para espaçamento em branco */
 }
 
-.hidden-img {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-
-/* .no-scroll {
-  overflow: hidden;
-  height: 100vh;
-} */
+/* Utilitários genéricos (recomendo deixar aqui) */
+.text-center { text-align: center; }
+.bg-soft { background-color: var(--bg-soft); }
+/* etc... */
