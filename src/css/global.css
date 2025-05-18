@@ -1,20 +1,26 @@
 /* Reset básico, variáveis CSS, estilos de base */
 :root {
-  /* Suas cores definidas */
-  --primary: #F47216;
-  --primary-rgb: 244, 114, 22;
-  --secondary: #1C2C3A;
-  --secondary-rgb: 28, 44, 58;
-  --darktext: #1E1E1E;
-  --darktext-rgb: 30, 30, 30;
-  --lighttext: #FFFFFF;
-  --lighttext-rgb: 255, 255, 255;
-  --bg-light: #FAFAFA;
-  --bg-soft: #F2F2F2;
-  --bg-dark: #121212;
-  --shadow-light: 0 2px 6px rgba(0, 0, 0, 0.08);
-  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
-  --shadow-dark: 0 6px 18px rgba(0, 0, 0, 0.2);
+  /* Nova paleta de cores */
+  --primary: #b09067; /* Cor primária solicitada */
+  --primary-light: #d4c4b5; /* Nude claro */
+  --primary-soft: #f5f0e8; /* Bege muito claro */
+  
+  --secondary: #8b7863; /* Marrom claro */
+  --secondary-dark: #5a4d3f; /* Marrom mais escuro para textos */
+  
+  /* Cores neutras */
+  --bg-light: #faf9f7; /* Fundo claro claro */
+  --bg-soft: #f5f0e8; /* Bege suave */
+  --bg-accent: #e3d5c8; /* Para destaques */
+  
+  /* Textos */
+  --text-dark: #3a3a3a; /* Mais suave que preto puro */
+  --text-medium: #5a5a5a;
+  --text-light: #ffffff;
+  
+  /* Sombras atualizadas */
+  --shadow-light: 0 2px 8px rgba(139, 120, 99, 0.08);
+  --shadow-medium: 0 4px 12px rgba(139, 120, 99, 0.12);
 }
 
 * {
@@ -24,14 +30,16 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
   line-height: 1.6;
-  color: var(--darktext);
 }
 
 h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.3;
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: var(--secondary-dark);
 }
 
 .container {
