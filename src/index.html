@@ -46,7 +46,40 @@
         <div class="header_menu">
           <a data-menu="logo" href="/">
             <span class="visually-hidden">Voltar para a página inicial</span>
-            <img src="./imgs/logo-dra-virginia 2.svg" alt="Logo Dra. Virgínia Müller" width="" height="">
+            <svg width="300" height="72" viewBox="0 0 300 72" xmlns="http://www.w3.org/2000/svg">
+              <!-- Definição do gradiente simplificada -->
+              <defs>
+                <linearGradient id="lineGradient" gradientUnits="userSpaceOnUse" x1="-30" y1="0" x2="260" y2="0">
+                  <stop offset="0%" stop-color="#5a4d3f"/>
+                  <stop offset="30%" stop-color="#5a4d3f"/>
+                  <stop offset="90%" stop-color="#5a4d3f" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            
+              <!-- Alvo posicionado com margem perfeita -->
+              <g transform="translate(40,40)">
+                <!-- Círculos concêntricos -->
+                <circle cx="0" cy="0" r="30" fill="none" stroke="#5a4d3f" stroke-width="3"/>
+                <circle cx="0" cy="0" r="20" fill="none" stroke="#5a4d3f" stroke-width="1"/>
+                <circle cx="0" cy="0" r="10" fill="#5a4d3f"/>
+                
+                <!-- Linha horizontal com gradiente VISÍVEL -->
+                <line x1="-30" y1="0" x2="260" y2="0" stroke="url(#lineGradient)" stroke-width="0.5" shape-rendering="crispEdges"/>
+                
+                <!-- Linha vertical -->
+                <line x1="0" y1="-30" x2="0" y2="30" stroke="#5a4d3f" stroke-width="0.5" shape-rendering="crispEdges"/>
+              </g>
+            
+              <!-- Nome principal -->
+              <text x="80" y="32" font-family="'Playfair Display', serif" font-size="24" font-weight="700" fill="#5a4d3f">
+                Dra. Virgínia Müller
+              </text>
+              
+              <!-- Credenciais -->
+              <text x="80" y="52" font-family="'Montserrat', sans-serif" font-size="12" fill="#5a4d3f" dominant-baseline="hanging">
+                CREMERS 24 804 • RQE 16942
+              </text>
+            </svg>
           </a>          
           <nav class="menu">
             <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
@@ -80,10 +113,11 @@
   <section class="intro">
     <div class="container">
       <div class="intro-text">
-        <h1>Dra. Virgínia Müller – Urologia com excelência, inovação e cuidado personalizado</h1>
-        <span class="cremers">CREMERS 24 804 . RQE 16942</span>
-        <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p>
-        <a href="#contato" class="btn-agendar">Agendar Consulta</a>
+        <h1>Dra. Virgínia Müller</h1>
+         <p>Urologia com excelência, inovação e cuidado personalizado.</p>
+        <!-- <span class="cremers">CREMERS 24 804 . RQE 16942</span> -->
+        <!-- <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p> -->
+        <a href="#contato" class="btn-agendar">Conheça a Dra. Virgínia Müller </a>
       </div>
     </div>
     <div class="decor-leaf leaf-1"></div>
@@ -110,16 +144,15 @@
   </div>
 </section>
 
-<!-- Sobre a Dra. -->
+<!-- Sobre a Dra. - Versão com Background Image -->
 <section class="sobre-dra">
+  <div class="sobre-dra-bg"></div> <!-- Div para a imagem de fundo -->
   <div class="container">
     <div class="sobre-text">
       <h2>Dra. Virgínia Müller</h2>
+      <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p>
       <p>Especialista em cirurgias robóticas, laser íntimo e urodinâmica, oferecendo tratamentos modernos e minimamente invasivos.</p>
       <a href="#" class="btn-saiba-mais">Saiba mais</a>
-    </div>
-    <div class="sobre-image">
-      <img src="./imgs/dra-retrato-escuro.jpg" alt="Dra. Virgínia no consultório">
     </div>
   </div>
   <div class="decor-leaf leaf-2"></div>
@@ -128,7 +161,10 @@
 <!-- Áreas de atuação -->
 <section class="areas-atuacao bg-soft">
   <div class="container animate-me">
-    <h2>Áreas de Atuação</h2>
+    <div class="areas-titulo">
+      <h2 class="text-center">Áreas de Atuação</h2>
+      <p>Como a Dra. Virgínia pode te ajudar</p>
+    </div>
     <div class="areas-grid">
       <div class="area-card">
         <div class="area-icon">
@@ -164,33 +200,39 @@
   </div>
 </section>
 
-<!-- Sobre a Clínica -->
-<section class="clinica animate-me">
+<!-- Sobre a Clínica - Versão Parallax -->
+<section class="clinica-parallax">
+  <div class="clinica-bg" aria-hidden="true"></div> <!-- Imagem de fundo parallax -->
+  
   <div class="container">
-    <div class="clinica-image">
-      <img src="./imgs/clinica.jpg" alt="Clínica da Dra. Virgínia Müller" />
-    </div>
-    <div class="clinica-text">
-      <h2>Na Clínica</h2>
-      <p>Você encontra acolhimento, escuta atenta e soluções seguras, baseadas na medicina mais atual.</p>
-      <ul class="clinica-beneficios">
-        <li>Ambiente moderno e confortável</li>
-        <li>Equipamentos de última geração</li>
-        <li>Atendimento humanizado</li>
-        <li>Protocolos de segurança rigorosos</li>
-      </ul>
-      <a href="#contato" class="btn-agendar">Agendar Consulta</a>
+    <div class="clinica-content">
+      <div class="clinica-text">
+        <h2>Na Nossa Clínica</h2>
+        <p class="clinica-destaque">Você encontra acolhimento, escuta atenta e soluções seguras, baseadas na medicina mais atual.</p>
+        
+        <ul class="clinica-beneficios">
+          <li><i class="fas fa-check-circle"></i> Ambiente moderno e confortável</li>
+          <li><i class="fas fa-check-circle"></i> Equipamentos de última geração</li>
+          <li><i class="fas fa-check-circle"></i> Atendimento humanizado</li>
+          <li><i class="fas fa-check-circle"></i> Protocolos de segurança rigorosos</li>
+        </ul>
+        
+        <a href="#contato" class="btn-agendar btn-clinica">
+          <i class="fas fa-calendar-alt"></i> Agendar Consulta
+        </a>
+      </div>
     </div>
   </div>
-</section>
+  
+  <div class="decor-medical"></div> <!-- Elemento decorativo opcional -->
+</section>  
 
-        
 <footer class="site-footer animate-me">
   <div class="container">
     <div class="footer-grid">
       <!-- Coluna 1 - Logo e Redes Sociais -->
       <div class="footer-col logo-col">
-        <img src="./imgs/logo-dra-virginia-branco2.svg" alt="Dra. Virgínia Müller - Urologista" class="footer-logo">
+        <h3>Dra. Virgínia Müller</h3>
         <p class="footer-credenciais">CREMERS 24.804 | RQE 16942</p>
         
         <div class="social-icons">
