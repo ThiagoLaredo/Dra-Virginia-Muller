@@ -1,24 +1,23 @@
 /* ======================
    FOOTER STYLES
    ====================== */
-  /* ======================
-   FOOTER STYLES
-   ====================== */
-.site-footer {
-  background-color: var(--secondary-dark); /* #5a4d3f - Marrom escuro */
-  color: var(--primary-soft); /* #f5f0e8 - Bege claro */
-  padding: 4rem 0 0;
+
+.site-footer {  
+  background: var(--bg-accent);
+  color: var(--primary-light);
+  padding: 4rem 0;
   font-size: 1rem;
   line-height: 1.6;
-  border-top: 1px solid var(--primary-light); /* #d4c4b5 - Borda sutil */
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  /* padding: 2rem 0; */
 }
+
 
 .footer-logo {
   max-width: 220px; /* Um pouco menor para elegância */
@@ -27,28 +26,20 @@
 }
 
 .footer-credenciais {
-  color: var(--primary-light); /* #d4c4b5 - Nude claro */
-  font-size: 0.9rem;
+  color: var(--primary-light); 
   margin-bottom: 1.5rem;
+  font-size: 0.8rem;
 }
 
 .footer-title {
-  color: var(--primary); /* #b09067 - Dourado suave */
+  color: var(--primary);
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
-  font-weight: 600;
-  font-family: 'Playfair Display', serif; /* Fonte diferenciada */
 }
 
 .footer-title::after {
-  /* content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 50px;
-  height: 2px; */
   content: "";
   position: absolute;
   left: 0;
@@ -56,24 +47,32 @@
   width: 100%; /* Largura do texto */
   height: 1px;
   background: linear-gradient(90deg, var(--primary), transparent 70%);
-  /* background-color: var(--primary);  */
 }
 
 .footer-col.logo-col h3 {
-  color:var(--primary-light);
+  color:var(--primary);
 }
 
 .site-footer address,
 .site-footer p {
+  font-size: 0.9rem;
   margin-bottom: 0.8rem;
-  color: var(--primary-light); /* #d4c4b5 - Texto claro */
+  color: var(--secondary); 
 }
 
 .site-footer i {
   margin-right: 0.5rem;
-  color: var(--primary); /* #b09067 - Ícones dourados */
+  color: var(--primary); 
   width: 20px;
   text-align: center;
+}
+
+.site-footer i:hover {
+  color: var(--text-light); 
+}
+
+.site-footer a:hover {
+  color: var(--primary-soft);
 }
 
 /* Botão do Rodapé */
@@ -81,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--primary); /* #b09067 */
+  background-color: var(--primary); 
   color: var(--text-light);
   padding: 0.7rem 1.8rem;
   border-radius: 50px;
@@ -148,8 +147,93 @@
   color: var(--primary); /* Coração dourado */
 }
 
+/* ======================
+   FORMULÁRIO DE AGENDAMENTO
+   ====================== */
+
+   .agendamento-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+   }
+
+   .lista-agendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   }
+
+   .form-agendamento {
+    background-color: var(--bg-accent);
+    color: var(--primary-light);
+    /* padding: 2rem; */
+    /* margin-bottom: 3rem; */
+    /* border-radius: 1rem; */
+    /* box-shadow: var(--shadow-medium); */
+    /* max-width: 600px; */
+    /* margin-inline: auto; */
+  }
+  .form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .form-row .form-group {
+    flex: 1 1 50%;
+    min-width: 200px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(176, 144, 103, 0.3);
+    background-color: var(--bg-soft);
+    color: #333;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+  }
+  
+  
+
 /* Responsivo */
 @media (max-width: 768px) {
+
+  .form-agendamento {
+    padding: 1.5rem;
+  }
+
+  .form-contato .btn-footer {
+    width: 100%;
+    justify-content: center;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;

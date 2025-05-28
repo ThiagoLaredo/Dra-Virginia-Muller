@@ -1,26 +1,32 @@
-/* Reset básico, variáveis CSS, estilos de base */
 :root {
-  /* Nova paleta de cores */
-  --primary: #b09067; /* Cor primária solicitada */
-  --primary-light: #d4c4b5; /* Nude claro */
-  --primary-soft: #f5f0e8; /* Bege muito claro */
+  /* Cores principais baseadas no logo */
+  --primary: #928071;    /* Tom terroso do logo (cor primária) */
+  --primary-light: #c4b8ad; /* Versão mais clara da primária */
+  --primary-soft: #e8e2dc; /* Versão quase branca da primária */
   
-  --secondary: #8b7863; /* Marrom claro */
-  --secondary-dark: #5a4d3f; /* Marrom mais escuro para textos */
+  /* Cores de destaque e contrastes */
+  --secondary: #0A0203;   /* Preto profundo do logo (quase preto) */
+  --secondary-light: #3a3a3a; /* Para textos escuros */
+  --secondary-soft: #5c5c5c; /* Para textos secundários */
   
-  /* Cores neutras */
-  --bg-light: #faf9f7; /* Fundo claro claro */
-  --bg-soft: #f5f0e8; /* Bege suave */
-  --bg-accent: #e3d5c8; /* Para destaques */
+  /* Neutros elegantes */
+  --bg-light: #f8f6f4;    /* Fundo claro com leve tom terroso */
+  --bg-soft: #f0ece8;     /* Fundo secundário */
+  --bg-accent: #e0d8d0;   /* Para destaques sutis */
   
   /* Textos */
-  --text-dark: #3a3a3a; /* Mais suave que preto puro */
-  --text-medium: #5a5a5a;
-  --text-light: #ffffff;
+  --text-dark: #0A0203;   /* Usando o preto do logo */
+  --text-medium: #4a4a4a; /* Cinza escuro */
+  --text-light: #ffffff;  /* Branco puro */
   
-  /* Sombras atualizadas */
-  --shadow-light: 0 2px 8px rgba(139, 120, 99, 0.08);
-  --shadow-medium: 0 4px 12px rgba(139, 120, 99, 0.12);
+  /* Sombras refinadas */
+  --shadow-light: 0 2px 12px rgba(10, 2, 3, 0.05);
+  --shadow-medium: 0 4px 16px rgba(10, 2, 3, 0.1);
+  --shadow-dark: 0 6px 24px rgba(10, 2, 3, 0.15);
+  
+  /* Cores de estado */
+  --hover-primary: #7a6a5d; /* Primária escurecida para hovers */
+  --active-primary: #6b5d52; /* Primária mais escura ainda */
 }
 
 * {
@@ -31,15 +37,18 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: var(--text-dark);
+  color: var(--secondary-dark);
   background: var(--bg-light);
   line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  font-weight: 500;
-  color: var(--secondary-dark);
+  color: var(--primary);
+}
+
+p {
+  line-height: 1.6;
 }
 
 h2:not(.text-center) {
@@ -80,8 +89,6 @@ h2.text-center::after {
   );
 }
 
-
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -105,3 +112,13 @@ h2.text-center::after {
 .text-center { text-align: center; }
 .bg-soft { background-color: var(--bg-soft); }
 /* etc... */
+
+[data-menu='logo'],
+[data-menu='button'],
+#menu > li > a,
+#menu > li > span,
+.header_acoes a,
+.intro-text *,
+.page-open-animate {
+  visibility: hidden;
+}
