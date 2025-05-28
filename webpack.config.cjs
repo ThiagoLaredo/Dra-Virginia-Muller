@@ -11,7 +11,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 const pages = [
-  'index'
+  'index', 
+  'index2', 
+  'index3'
 ];
 
 // Entradas dinâmicas

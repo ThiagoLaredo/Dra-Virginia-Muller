@@ -1,9 +1,9 @@
 /* ===== BOTÕES PRINCIPAIS ===== */
 .btn-agendar, 
-.btn-saiba-mais, 
+.btn-saiba-mais,
 .btn-ver-todas,
 .btn-primary,
-.btn-outline {
+.btn-outline, .btn-footer {
   display: inline-flex; /* Melhor alinhamento */
   align-items: center;
   justify-content: center;
@@ -30,8 +30,8 @@
 }
 
 .btn-agendar:hover, .btn-primary:hover {
-  background-color: var(--secondary); /* Marrom claro no hover */
-  border-color: var(--secondary);
+  background-color: var(--hover-primary); /* Marrom claro no hover */
+  border-color: var(--hover-primary);
   transform: translateY(-2px) scale(1.02); /* Efeito de levitação suave */
   box-shadow: 0 4px 12px rgba(176, 144, 103, 0.2);
 }
@@ -43,6 +43,22 @@
   background-color: transparent;
   color: var(--primary);
   border: 2px solid var(--primary);
+  transition: all 0.4s ease; /* Transição mais suave */
+}
+
+.btn-saiba-mais:hover,
+.btn-ver-todas:hover,
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--text-light);
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(176, 144, 103, 0.1);
+}
+
+.btn-white {
+  background-color: var(--bg-light);
+  color: var(--primary);
+  border: 2px solid var(--bg-light); /* Borda sutil */
   transition: all 0.4s ease; /* Transição mais suave */
 }
 
@@ -75,7 +91,7 @@
 /* ===== BOTÕES DO FOOTER ===== */
 .btn-footer {
   background-color: var(--primary-light); /* Nude claro */
-  color: var(--secondary-dark);
+  color: var(--text-light);
   border: 2px solid var(--primary-light);
 }
 

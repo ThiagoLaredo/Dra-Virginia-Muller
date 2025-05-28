@@ -7,7 +7,7 @@
     background-color: transparent; 
     position: fixed;
     top: 0;
-    /* padding: 1rem 2rem; */
+    padding: .5rem 0rem;
     transition: all 0.4s ease;
     /* border-bottom: 1px solid rgba(28, 44, 58, 0.05);  */
   }
@@ -48,9 +48,10 @@
   
   .menu li a,
   .menu li span {
-    font: 500 1rem/1.2 'Montserrat', sans-serif; /* Fonte mais profissional */
-    color: var(--secondary-dark); /* Marrom escuro */
-    text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3); /* Sombra sutil */    text-decoration: none;
+    font: 500 1rem/1.2 'Montserrat', sans-serif; 
+    color: var(--secondary); 
+    /* text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3);  */
+    text-decoration: none;
     padding: 0.5rem 0;
     position: relative;
     transition: color 0.3s ease;
@@ -76,21 +77,6 @@
     width: 100%;
   }
   
-  /* Botão Agendar */
-  .btn-agendar {
-    background-color: var(--primary); /* Laranja */
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-agendar:hover {
-    background-color: #e06512; /* Laranja mais escuro */
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(244, 114, 22, 0.2);
-  }
   
   /* Efeito no scroll */
   .header.header-scrolled {
