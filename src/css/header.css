@@ -89,6 +89,15 @@
   .header-scrolled .logo-svg {
     width: 160px; /* Logo reduz levemente */
   }
+
+  @media (max-width: 768px) {
+    
+    .header .container {
+      display: block;
+    }
+  }
+
+  
   
   /* Responsivo */
   @media (max-width: 992px) {

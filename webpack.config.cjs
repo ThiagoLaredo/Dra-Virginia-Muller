@@ -12,7 +12,6 @@ const path = require('path');
 
 const pages = [
   'index', 
-  'index2', 
   'index3'
 ];
 

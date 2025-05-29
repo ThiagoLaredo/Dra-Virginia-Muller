@@ -55,11 +55,6 @@
     width: 100%;
   }
 
-  .header-scrolled .menu li a,
-  .header-scrolled .menu li span {
-    font: 600 1rem 'Inter', sans-serif;
-  }
-
   .header_menu {
     justify-content: space-between;
   }
@@ -84,8 +79,8 @@
     justify-content: center; 
     position: relative;
     z-index: 300;
-    width: 2rem; 
-    height: 2rem; 
+    width: 3rem; 
+    height: 3rem; 
   }
 
   #hamburguer {
@@ -143,8 +138,8 @@
     left: 0;
     text-align: center;
     z-index: 200;
-    background-color: var(--primary);
-    padding: 80px 20px 20px;
+    background-color: var(--bg-soft);
+    padding: calc(var(--header-height) + 4rem) 0;
     overflow-y: auto;
     box-sizing: border-box;
   }
@@ -218,7 +213,6 @@
 
   [data-menu="contato-mobile"].active  {
     position: fixed;
-    font: 500 1rem 'Inter', sans-serif;
     color: var(--textwhite);
     display: block;
     bottom: 0;
@@ -246,7 +240,7 @@
     color: var(--roxo);
     display: block;
     bottom: 0;
-    right: 80px;
+    right: 60px;
     z-index: 999;
     padding: 1rem;
     opacity: 0;
@@ -255,10 +249,10 @@
   [data-menu="instagram"].active {
     position: fixed;
     font: 500 1rem 'OpenSans', sans-serif;
-    color: var(--roxo);
+    color: var(--primary);
     display: block;
     bottom: 0;
-    right: 40px;
+    right: 10px;
     z-index: 999;
     padding: 1rem;
     opacity: 0;
