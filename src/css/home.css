@@ -397,6 +397,7 @@ h1::after {
   
   .clinica-bg {
     background-attachment: scroll; /* Remove parallax em mobile */
+    background-position: right;
       &::after {
       content: '';
       position: absolute;
