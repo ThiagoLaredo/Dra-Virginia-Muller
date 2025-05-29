@@ -225,8 +225,12 @@
 /* Responsivo */
 @media (max-width: 768px) {
 
+  .lista-agendamento {
+    align-items: center;
+  }
+
   .form-agendamento {
-    padding: 1.5rem;
+    padding: 0;
   }
 
   .form-contato .btn-footer {
@@ -237,6 +241,7 @@
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin-bottom: 2rem;
   }
   
   .footer-col {
@@ -246,6 +251,8 @@
   .footer-title::after {
     left: 50%;
     transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent 0%, var(--primary-light) 50%, transparent 100%)
+
   }
   
   .social-icons {

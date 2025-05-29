@@ -2,13 +2,12 @@
 import gsap from "gsap";
 
 export default class MenuMobile {
-  constructor(logoMobile, menuButton, menuList, contatoMobile, whatsappMobile, linkedinMobile, instagramMobile, headerAcoes, events) {
+  constructor(logoMobile, menuButton, menuList, contatoMobile, whatsappMobile, instagramMobile, headerAcoes, events) {
     this.logoMobile = document.querySelector(logoMobile);
     this.menuButton = document.querySelector(menuButton);
     this.menuList = document.querySelector(menuList);
     this.contatoMobile = document.querySelector(contatoMobile);
     this.whatsappMobile = document.querySelector(whatsappMobile);
-    this.linkedinMobile = document.querySelector(linkedinMobile);
     this.instagramMobile = document.querySelector(instagramMobile);
     this.headerAcoes = document.querySelector(headerAcoes); // Novo seletor
     this.activeClass = "active";
@@ -33,7 +32,6 @@ export default class MenuMobile {
         this.menuButton.classList.add(this.activeClass);
         this.contatoMobile.classList.add(this.activeClass);
         this.whatsappMobile.classList.add(this.activeClass);
-        this.linkedinMobile.classList.add(this.activeClass);
         this.instagramMobile.classList.add(this.activeClass);
         if (this.headerAcoes) this.headerAcoes.classList.add(this.activeClass); // Adiciona classe aos botões
         this.animateMenuItems();
@@ -50,7 +48,6 @@ export default class MenuMobile {
       this.menuButton.classList.remove(this.activeClass);
       this.contatoMobile.classList.remove(this.activeClass);
       this.whatsappMobile.classList.remove(this.activeClass);
-      this.linkedinMobile.classList.remove(this.activeClass);
       this.instagramMobile.classList.remove(this.activeClass);
       if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
       this.toggleMenuAnimation(false);
@@ -142,7 +139,7 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.linkedinMobile && this.instagramMobile) {
+    if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents();
     }
