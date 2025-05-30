@@ -321,7 +321,7 @@ h1::after {
 
 /* Container do conteúdo */
 .clinica-content {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 /* Texto e benefícios */
@@ -476,10 +476,15 @@ h1::after {
   }
 
   /* ===== SEÇÃO CLINICA ===== */
+
+  .clinica-parallax {
+    min-height: 100%;
+  }
+
   .clinica-bg {
     filter: brightness(0.6) contrast(1.1) sepia(0.2) saturate(0.8);
     background-attachment: scroll;
-    background-position: right;
+    background-position: 90%;
     &::after {
       content: '';
       position: absolute;
