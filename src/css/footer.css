@@ -151,6 +151,10 @@
    FORMULÁRIO DE AGENDAMENTO
    ====================== */
 
+   .footer-title {
+    font-size: 1.5rem;
+  }
+
    .agendamento-container {
     display: flex;
     align-items: flex-start;
@@ -240,8 +244,8 @@
 
   .footer-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 4rem;
+    margin-bottom: 4rem;
   }
   
   .footer-col {
