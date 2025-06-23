@@ -1,7 +1,10 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
+import { TextPlugin } from "gsap/TextPlugin.js"; // Importe do pacote principal
 
-gsap.registerPlugin(ScrollTrigger);
+
+// Registre os plugins necessários
+gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export const initPageOpenAnimations = () => {
   // 1. Configurações iniciais
@@ -38,7 +41,7 @@ export const initPageOpenAnimations = () => {
   tracadoPaths.forEach(path => {
     const length = path.getTotalLength();
 
-    path.style.stroke = "#c4b8ad";
+    path.style.stroke = "#928071";
     path.style.fill = "none";
     path.style.strokeWidth = 1;
     path.style.strokeDasharray = length;
@@ -144,6 +147,7 @@ tl.set(".intro-text h1", { visibility: "visible" })
 
 export function initScrollAnimations() {
   console.log("initScrollAnimations() chamada!");
+  
 
   const elements = document.querySelectorAll(".animate-me");
   console.log("Elementos encontrados:", elements);
@@ -181,6 +185,43 @@ export function initScrollAnimations() {
         markers: false,
       },
       ...animationVars
+    });
+  });
+}
+
+
+export function initTypewriterAnimations() {
+  const typeElements = document.querySelectorAll('.sobre-text p'); // Agora direcionando os parágrafos
+  
+  typeElements.forEach(paragraph => {
+    const conteudo = paragraph.textContent;
+    paragraph.textContent = '';
+    
+    // Cria um span vazio para a animação
+    const typeSpan = document.createElement('span');
+    paragraph.appendChild(typeSpan);
+    
+    // Remove o cursor quando a animação terminar
+    const onComplete = () => {
+      paragraph.parentElement.classList.remove('typing-active');
+    };
+
+    gsap.to(typeSpan, {
+      scrollTrigger: {
+        trigger: paragraph,
+        start: "top 80%",
+        toggleActions: "play none none none"
+      },
+      duration: conteudo.length * 0.05,
+      text: {
+        value: conteudo,
+        delimiter: ""
+      },
+      ease: "none",
+      onStart: () => {
+        paragraph.parentElement.classList.add('typing-active');
+      },
+      onComplete: onComplete
     });
   });
 }

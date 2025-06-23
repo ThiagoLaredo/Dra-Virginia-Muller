@@ -10,7 +10,7 @@ import MenuMobile from '../modules/menu-mobile.js';
 import HeaderManager from '../modules/HeaderManager.js'; // Já está importado
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
-import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
+import { initPageOpenAnimations, initScrollAnimations, initTypewriterAnimations } from '../modules/animations.js';
 import SwiperAgentsSlider from '../modules/SwiperAgentsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restante do seu código existente...
     initPageOpenAnimations();
     initScrollAnimations();
+    initTypewriterAnimations();
     new FormHandler();
 
     const swiperEl = document.querySelector('.agents-swiper');

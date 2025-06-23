@@ -34,18 +34,12 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> -->
     <script>document.documentElement.className += ' js';</script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">    <!-- OU -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Spectral:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Zilla+Slab:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
- 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
   </head>
 
   <body>
 
-    <!-- <header class="header home2">
+    <header class="header home2">
       <div class="container">
         <div class="header_menu">
           <a data-menu="logo" href="./index.html">
@@ -70,42 +64,8 @@
         <div class="header_acoes">
           <a href="./" class="btn-agendar" target="_blank">Agende sua consulta</a>  
         </div>
-    </header>  -->
+    </header> 
 
-
-    <header class="header home2">
-      <div class="container">
-        <div class="header_menu">
-          <!-- Logo (permanece à esquerda) -->
-          <a data-menu="logo" href="./index.html">
-            <span class="visually-hidden">Voltar para a página inicial</span>
-            <img src="./imgs/logo-escrito.svg" alt="Logo Dra. Virgínia Müller" width="260" height="auto">
-          </a>
-          
-          <!-- Container para menu e ações -->
-          <div class="menu-container">
-            <!-- Menu -->
-            <nav class="menu">
-              <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
-                <span id="hamburguer"></span>
-              </button>
-              <ul data-menu="list" id="menu">
-                  <li><a href="./">Sobre</a></li>
-                  <li><a href="./">Áreas de Atuação</a></li>
-                  <li><a href="./">Clínica</a></li>
-                  <li><a href="./">Na Mídia</a></li>
-                  <li><a href="./">Contato</a></li>
-                </ul>              
-            </nav>
-            
-            <!-- Ações -->
-            <div class="header_acoes">
-              <a href="./" class="btn-agendar" target="_blank">Agende sua consulta</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
     <!-- Icones sociais menu mobile -->
     <a data-menu="contato-mobile" href="mailto:contato@" target="_blank">contato@drvirginia.com.br</a>
     <a data-menu="whatsapp" href="" target="_blank" loading="lazy">
@@ -135,98 +95,158 @@
       <div class="intro-text">
         <h1>Dra. Virgínia Müller</h1>
          <p>Urologia com excelência, inovação e cuidado personalizado.</p>
-        <p class="cremers">CREMERS 24 804 . RQE 16942</p>
+        <!-- <span class="cremers">CREMERS 24 804 . RQE 16942</span> -->
         <!-- <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p> -->
-        <!-- <a href="#contato" class="btn-saiba-mais btn-white">Conheça a Dra. Virgínia Müller </a> -->
+        <a href="#contato" class="btn-saiba-mais btn-white">Conheça a Dra. Virgínia Müller </a>
       </div>
   </section>
 
-<!-- Áreas de atuação -->
-<section class="areas-atuacao">
-  <div class="container animate-me animate-up">
-    <div class="areas-titulo">
-      <h2 class="text-center">Áreas de Atuação</h2>
+<!-- Destaques -->
+<section class="destaques bg-soft">
+  <div class="container animate-me animate-left">
+    <div class="destaque-item">
+      <i class="fas fa-award"></i>      
+      <h3>Excelência</h3>
+      <p>Atendimento baseado em evidências científicas e protocolos internacionais</p>
     </div>
-    <div class="areas-grid animate-me animate-left">
-      <div class="area-card">
-        <h3>Cirurgia robótica urológica</h3>
-        <p>Técnicas avançadas para procedimentos de precisão com recuperação mais rápida.</p>
-      </div>
-      <div class="area-card">
-        <h3>Laser íntimo</h3>
-        <p>Tratamentos funcionais e estéticos para saúde íntima feminina e masculina.</p>
-      </div>
-      <div class="area-card">
-        <h3>Urodinâmica</h3>
-        <p>Avaliação completa da função urinária para diagnóstico preciso.</p>
-      </div>
-      <div class="area-card">
-        <h3>Uro-oncologia</h3>
-        <p>Diagnóstico e tratamento de cânceres do trato urinário.</p>
-      </div>
+    <div class="destaque-item">
+      <i class="fas fa-microchip"></i>
+      <h3>Tecnologia</h3>
+      <p>Equipamentos modernos e técnicas minimamente invasivas</p>
     </div>
-    <!-- <a href="#" class="btn-ver-todas animate-me animate-up">Ver todas as áreas</a> -->
+    <div class="destaque-item">
+      <i class="fas fa-hand-holding-heart"></i>
+      <h3>Acolhimento</h3>
+      <p>Olhar individualizado para cada paciente e suas necessidades</p>
+    </div>
   </div>
 </section>
 
 <!-- Sobre a Dra. - Versão com Background Image -->
 <section class="sobre-dra">
+  <div class="sobre-dra-bg animate-me animate-right"></div>
+  <!-- Div para a imagem de fundo -->
   <div class="container animate-me animate-left">
     <div class="sobre-text">
-      <!-- <h2>Dra. Virgínia Müller</h2> -->
+      <h2>Dra. Virgínia Müller</h2>
       <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p>
+      <p>Especialista em cirurgias robóticas, laser íntimo e urodinâmica, oferecendo tratamentos modernos e minimamente invasivos.</p>
+      <a href="#" class="btn-saiba-mais">Saiba mais</a>
     </div>
-
-    <div class="box-text">
-      <h2>Sobre</h2>
-      <p>Especialista em cirurgias robóticas, laser íntimo e urodinâmica, a Dra. Virgínia oferece tratamentos modernos, minimamente invasivos e altamente eficazes, sempre com foco na saúde, conforto e qualidade de vida dos seus pacientes.</p>
-    </div>
-    <div class="sobre-imagem">
-      <img src="./imgs/DRA-VIRGINIA.webp" alt="Dra. Virgínia Müller" class="animate-me animate-right"> 
-    </div>
-    <div class="sobre-btn">
-      <a href="#contato" class="btn-agendar animate-me animate-up">Saiba Mais</a>
   </div>
 </section>
 
-<!-- <section class="banner animate-me animate-fade"></section> -->
+<section class="banner animate-me animate-fade"></section>
 
+<!-- Áreas de atuação -->
+<section class="areas-atuacao bg-soft">
+  <div class="container animate-me animate-up">
+    <div class="areas-titulo">
+      <h2 class="text-center">Áreas de Atuação</h2>
+      <p>Como a Dra. Virgínia pode te ajudar</p>
+    </div>
+    <div class="areas-grid animate-me animate-left">
+      <div class="area-card">
+        <div class="area-icon">
+          <i class="fas fa-procedures"></i> 
+        </div>
+        <h3>Cirurgia robótica urológica</h3>
+        <p>Técnicas avançadas para procedimentos de precisão com recuperação mais rápida.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">
+          <i class="fas fa-burn"></i> 
+        </div>
+        <h3>Laser íntimo</h3>
+        <p>Tratamentos funcionais e estéticos para saúde íntima feminina e masculina.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">
+          <i class="fas fa-microscope"></i>
 
+        </div>
+        <h3>Urodinâmica</h3>
+        <p>Avaliação completa da função urinária para diagnóstico preciso.</p>
+      </div>
+      <div class="area-card">
+        <div class="area-icon">
+          <i class="fas fa-dna"></i>
+        </div>
+        <h3>Uro-oncologia</h3>
+        <p>Diagnóstico e tratamento de cânceres do trato urinário.</p>
+      </div>
+    </div>
+    <a href="#" class="btn-ver-todas animate-me animate-up">Ver todas as áreas</a>
+  </div>
+</section>
+
+<!-- Sobre a Clínica - Versão Parallax -->
+<section class="clinica-parallax">
+  <div class="clinica-bg animate-me animate-fade" aria-hidden="true"></div>
+  <!-- Imagem de fundo parallax -->
+  
+  <div class="container">
+    <div class="clinica-content animate-me">
+      <div class="clinica-text">
+        <h2>Na Nossa Clínica</h2>
+        <p class="clinica-destaque">Você encontra acolhimento, escuta atenta e soluções seguras, baseadas na medicina mais atual.</p>
+        
+        <ul class="clinica-beneficios">
+          <li><i class="fas fa-check-circle"></i> Ambiente moderno e confortável</li>
+          <li><i class="fas fa-check-circle"></i> Equipamentos de última geração</li>
+          <li><i class="fas fa-check-circle"></i> Atendimento humanizado</li>
+          <li><i class="fas fa-check-circle"></i> Protocolos de segurança rigorosos</li>
+        </ul>
+        
+        <a href="#contato" class="btn-agendar btn-clinica">
+          <i class="fas fa-calendar-alt"></i> Agendar Consulta
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="decor-medical"></div> <!-- Elemento decorativo opcional -->
+</section>  
 
 <footer class="site-footer">
   <div class="container">
 
+  <!-- Coluna 1 - Agendamento -->
     <div class="footer-grid agendamento">
-      <div  class="footer-col lista-agendamento">
-        <h3 class="footer-title">Agende sua consulta</h3>
-        <p><i class="fas fa-phone-alt"></i> <a>(54) 99999-9999</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a>(54) 99999-9999</a></p>
-        <p><i class="far fa-envelope"></i> <a>contato@dravirginia.com.br</a></p>
-      </div>
-      <div class="footer-col form-agendamento animate-me animate-up">
-        <form class="form-contato" action="#" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" id="nome" name="nome" placeholder="Nome" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-            </div>
+        <div  class="footer-col lista-agendamento">
+          <h3 class="footer-title-consulta">Agende sua consulta</h3>
+          <p><i class="fas fa-phone-alt"></i> <a>(54) 99999-9999</a></p>
+          <p><i class="fab fa-whatsapp"></i> (54) 99999-9999</p>
+          <p><i class="far fa-envelope"></i> contato@dravirginia.com.br</p>
+          <a href="#" class="btn-agendar">Agendar Online</a>
+        </div>
+
+  <!-- Coluna 2 - Form -->
+        <div class="footer-col form-agendamento animate-me animate-up">
+          <h3 class="footer-title">Envie uma mensagem</h3>
+          <p>Agende sua consulta para saber quais são os procedimentos mais adequados para você.
+          </p>
+          <form class="form-contato" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+              </div>
+            </div>         
             <div class="form-group">
               <input type="email" id="email" name="email" placeholder="E-mail" required>
             </div>
-          </div>
-          <div class="form-group">
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-          </div>
-          <button type="submit" class="btn-footer">Enviar</button>
-        </form>       
-      </div>
-
+          
+            <div class="form-group">
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+            </div>
+          
+            <button type="submit" class="btn-footer">Enviar</button>
+          </form>         
+        </div>
     </div>
-
     <div class="footer-grid animate-me animate-up">
       <!-- Coluna 1 - Logo e Redes Sociais -->
       <div class="footer-col logo-col">

@@ -2,22 +2,31 @@
    FOOTER STYLES
    ====================== */
 
-.site-footer {  
-  background: var(--bg-accent);
-  color: var(--primary-light);
-  padding: 4rem 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
+   .site-footer {
+    background: linear-gradient(
+      to bottom, 
+      white 0%, 
+      white 30%,  /* Reduz a área branca */
+      var(--bg-accent) 30%,  /* Início mais cedo da cor secundária */
+      var(--bg-accent) 100%
+    );
+    color: var(--primary-light);
+    padding: 4rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
 
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2.5rem;
   margin-bottom: 4rem;
-  /* padding: 2rem 0; */
 }
 
+.footer-grid.agendamento {
+  background-color: var(--primary);
+  padding: 4rem;
+}
 
 .footer-logo {
   max-width: 220px; /* Um pouco menor para elegância */
@@ -37,6 +46,14 @@
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
+}
+
+.lista-agendamento .footer-title {
+  color: white;
+}
+
+.lista-agendamento .footer-title::after {
+  background: linear-gradient(90deg, white, transparent 70%);
 }
 
 .footer-title::after {
@@ -61,14 +78,30 @@
 }
 
 .site-footer i {
-  margin-right: 0.5rem;
-  color: var(--primary); 
-  width: 20px;
-  text-align: center;
+  /* Círculo perfeito */
+  display: inline-flex;        /* Mudamos para flex */
+  align-items: center;        /* Centraliza verticalmente */
+  justify-content: center;    /* Centraliza horizontalmente */
+  
+  /* Tamanho e forma */
+  width: 28px;                /* Aumente para melhor visual */
+  height: 28px;               /* Igual à width para círculo perfeito */
+  border-radius: 50%;         /* Garante o formato circular */
+  
+  /* Cores e espaçamento */
+  background-color: white;    /* Cor de fundo */
+  color: var(--primary);      /* Cor do ícone */
+  margin-right: 0.8rem;       /* Espaçamento aumentado */
+  
+  /* Efeitos visuais */
+  transition: all 0.3s ease;  /* Suaviza as transições */
+  font-size: 14px;            /* Tamanho do ícone */
 }
 
 .site-footer i:hover {
-  color: var(--text-light); 
+  color: white;
+  background-color: var(--primary); /* Inverte cores no hover */
+  transform: scale(1.1);      /* Efeito de zoom sutil */
 }
 
 .site-footer a:hover {
@@ -151,9 +184,6 @@
    FORMULÁRIO DE AGENDAMENTO
    ====================== */
 
-   .footer-title {
-    font-size: 1.5rem;
-  }
 
    .agendamento-container {
     display: flex;
@@ -168,8 +198,11 @@
     gap: 1rem;
    }
 
+   .lista-agendamento a {
+    color: white;
+   }
+
    .form-agendamento {
-    background-color: var(--bg-accent);
     color: var(--primary-light);
     /* padding: 2rem; */
     /* margin-bottom: 3rem; */
@@ -178,22 +211,24 @@
     /* max-width: 600px; */
     /* margin-inline: auto; */
   }
+
   .form-contato {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
   }
   
-  .form-row {
-    display: flex;
-    gap: 1.2rem;
-    flex-wrap: wrap;
-  }
-  
-  .form-row .form-group {
-    flex: 1 1 50%;
-    min-width: 200px;
-  }
+/* Garante que os campos de telefone e e-mail ocupem metade da linha */
+.form-row {
+  display: flex;
+  gap: 1rem; /* Espaçamento entre os campos */
+  width: 100%;
+}
+
+.form-row .form-group {
+  flex: 1; /* Ocupa espaço igual */
+  min-width: 0; /* Evita quebra de layout */
+}
   
   .form-group {
     display: flex;
@@ -237,15 +272,61 @@
     padding: 0;
   }
 
-  .form-contato .btn-footer {
-    width: 100%;
-    justify-content: center;
+  .footer-grid.agendamento {
+    padding: 1.5rem;
+  }
+
+    .form-row {
+      flex-direction: column;
+      gap: 1.2rem; /* Espaçamento maior entre campos empilhados */
+    }
+    
+    .form-row .form-group {
+      width: 100%;
+      flex: none; /* Remove o flex igualitário */
+    }
+  
+  
+  /* Estilos base para os campos */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(176, 144, 103, 0.3);
+    background-color: var(--bg-soft);
+    color: #333;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    width: 100%; /* Garante largura total */
+    box-sizing: border-box; /* Inclui padding na largura */
+  }
+  
+  /* Placeholders */
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    opacity: 0.7; /* Mais suave visualmente */
+  }
+  
+  /* Estados de foco */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2); /* Efeito de foco sutil */
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-    margin-bottom: 4rem;
+    grid-template-columns: 1fr; /* Muda para 1 coluna */
+    gap: 1.5rem; /* Reduz o espaçamento */
+    margin-bottom: 5rem; /* Ajusta margem */
   }
   
   .footer-col {

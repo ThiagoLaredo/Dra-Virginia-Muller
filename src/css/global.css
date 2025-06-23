@@ -12,7 +12,7 @@
   /* Neutros elegantes */
   --bg-light: #f8f6f4;    /* Fundo claro com leve tom terroso */
   --bg-soft: #f0ece8;     /* Fundo secundário */
-  --bg-accent: #e0d8d0;   /* Para destaques sutis */
+  --bg-accent: rgba(224, 203, 184, 0.45);   /* Para destaques sutis */
   
   /* Textos */
   --text-dark: #0A0203;   /* Usando o preto do logo */
@@ -38,7 +38,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--secondary-dark);
-  background: var(--bg-light);
+  background: #fff;
   line-height: 1.6;
 }
 
@@ -47,9 +47,21 @@ h1, h2, h3 {
   color: var(--primary);
 }
 
+body {
+  font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
+}
+
+h1, h2, h3 {
+  font-family: 'Spectral', serif; /* Híbrido moderno serif/sans */
+  font-weight: 600; /* Peso médio para frescor */
+}
+
 p {
   line-height: 1.6;
+  color: var(--secondary-light);
 }
+
+h2 {font-size: 2rem;}
 
 h2:not(.text-center) {
   position: relative;

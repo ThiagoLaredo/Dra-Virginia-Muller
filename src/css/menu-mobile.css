@@ -160,7 +160,7 @@
   .js [data-menu="list"] a {
     font-size: 1.1rem;
     line-height: 1.4;
-    color: var(--textwhite);
+    color: var(--primary);
     padding: 0.8rem 1rem;
     display: block;
     width: 100%;
@@ -213,7 +213,7 @@
 
   [data-menu="contato-mobile"].active  {
     position: fixed;
-    color: var(--textwhite);
+    color: var(--primary);
     display: block;
     bottom: 0;
     left: 0;
