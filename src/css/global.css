@@ -47,6 +47,15 @@ h1, h2, h3 {
   color: var(--primary);
 }
 
+body {
+  font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
+}
+
+h1, h2, h3 {
+  font-family: 'Spectral', serif; /* Híbrido moderno serif/sans */
+  font-weight: 600; /* Peso médio para frescor */
+}
+
 p {
   line-height: 1.6;
   color: var(--secondary-light);
