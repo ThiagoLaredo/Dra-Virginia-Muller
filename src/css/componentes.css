@@ -7,7 +7,7 @@
   display: inline-flex; /* Melhor alinhamento */
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 2.2rem; /* Mais horizontal padding */
+  padding: 0.8rem 1.4rem; /* Mais horizontal padding */
   border-radius: 50px; /* Bordas mais arredondadas */
   font-weight: 600;
   font-size: 0.95rem; /* Tamanho levemente reduzido */
@@ -22,9 +22,9 @@
 
 /* Botão Primário (Agendar) */
 .btn-agendar, .btn-primary {
-  background-color: var(--primary);
+  background-color: #cebd85;
   color: var(--text-light);
-  border: 2px solid var(--primary); /* Borda sutil */
+  border: 2px solid #cebd85; /* Borda sutil */
   position: relative;
   overflow: hidden; /* Para efeito hover */
 }

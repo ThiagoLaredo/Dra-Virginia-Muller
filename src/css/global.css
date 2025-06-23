@@ -12,7 +12,7 @@
   /* Neutros elegantes */
   --bg-light: #f8f6f4;    /* Fundo claro com leve tom terroso */
   --bg-soft: #f0ece8;     /* Fundo secundário */
-  --bg-accent: #e0d8d0;   /* Para destaques sutis */
+  --bg-accent: rgba(224, 203, 184, 0.45);   /* Para destaques sutis */
   
   /* Textos */
   --text-dark: #0A0203;   /* Usando o preto do logo */
@@ -29,6 +29,23 @@
   --active-primary: #6b5d52; /* Primária mais escura ainda */
 }
 
+:root {
+  /* Cores existentes... */
+  
+  /* Novos tons rosas (complementares ao terroso) */
+  --accent-pink: #f5d6e6;       /* Rosa pastel principal */
+  --accent-pink-light: #f9e9f2; /* Versão mais clara */
+  --accent-pink-dark: #e8b8d3;  /* Versão mais escura para contrastes */
+  
+  /* Cores de destaque para botões */
+  --cta-color: #d4a5b8;         /* Rosa-terroso (mistura sutil) */
+  --cta-hover: #c293a8;         /* Versão escura para hover */
+  
+  /* Fundos rosados */
+  --bg-pink-light: #fdf5f9;     /* Fundo muito suave */
+  --bg-pink-accent: #f8e5ee;    /* Para destaques */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -38,7 +55,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   color: var(--secondary-dark);
-  background: var(--bg-light);
+  background: #fff;
   line-height: 1.6;
 }
 
@@ -49,7 +66,10 @@ h1, h2, h3 {
 
 p {
   line-height: 1.6;
+  color: var(--secondary-light);
 }
+
+h2 {font-size: 2rem;}
 
 h2:not(.text-center) {
   position: relative;
