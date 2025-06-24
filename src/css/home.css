@@ -8,7 +8,7 @@
 
 .intro {
   padding: calc(var(--header-height) + 1rem) 0;
-  background-color: rgba(224, 203, 184, 0.45); /* Equivalente a #e0cbb885 */
+  background-color: rgba(224, 203, 184, 1); /* Equivalente a #e0cbb885 */
   position: relative;
   overflow: hidden;
   height: 100vh;
@@ -70,7 +70,7 @@ visibility: hidden;
 .intro-text h1 {
   font-size: 3.2rem;
   line-height: 1.2;
-  color: var(--primary); /* Marrom escuro */
+  color: #7a6a5d; /* Versão 20% mais escura */
   /* text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3);    */
   font-weight: 700;
   position: relative;
@@ -95,12 +95,12 @@ visibility: hidden;
 
 .intro-text p {
   font-size: 1.4rem;
-  color: var(--primary);
+  color: #7a6a5d; /* Versão 20% mais escura */
 }
 
 .intro-text p.cremers {
   display: block;
-  color: var(--primary);
+  color: #7a6a5d; /* Versão 20% mais escura */
   font-size: 1rem;
   margin: 0.5rem 0 1.5rem;
   font-weight: 200;
@@ -219,7 +219,7 @@ visibility: hidden;
   flex-direction: column;
   gap: 1rem;
   padding: 3rem;
-  background: var(--bg-light);
+  background: var(--bg-soft);
   position: absolute;
   bottom: -10%;
   left: 25%;
@@ -449,7 +449,8 @@ border-radius: 1rem 0 0 0;
 @media (max-width: 768px) {
 
   .intro {
-    padding: calc(var(--header-height) + 2rem) 0;
+    padding: calc(var(--header-height) + 4rem) 0;
+    padding-bottom: 0; /* Sobrescreve o valor anterior */
     background-attachment: scroll; /* Remove o efeito parallax */
     background-position: center; /* Centraliza a imagem de fundo */
   }
@@ -473,7 +474,11 @@ border-radius: 1rem 0 0 0;
   }
 
   .intro-text p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .intro-text p.cremers {
+    font-size: 0.8rem;
   }
 
   .simbolo {
@@ -518,6 +523,16 @@ border-radius: 1rem 0 0 0;
     text-align: center;
     align-items: center;
   }
+
+  .box-text h2 {
+    text-align: center;    }
+
+  /* Cursor da máquina de escrever */
+.sobre-text::after {
+
+  font-size: 1.8rem; /* 0.4rem maior que o texto */
+
+}
 
   .sobre-text h2 {
     font-size: 1.75rem;

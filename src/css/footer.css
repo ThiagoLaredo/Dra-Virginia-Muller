@@ -24,7 +24,7 @@
 }
 
 .footer-grid.agendamento {
-  background-color: var(--primary);
+  background-color: var(--primary-light);
   padding: 4rem;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .footer-title {
-  color: var(--primary);
+  color: #7a6a5d; /* Versão 20% mais escura */
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   position: relative;
@@ -264,6 +264,11 @@
 /* Responsivo */
 @media (max-width: 768px) {
 
+  .lista-agendamento .footer-title::after {
+    background: linear-gradient(90deg, transparent 0%, var(--primary-light) 50%, transparent 100%);
+  }
+
+
   .lista-agendamento {
     align-items: center;
   }
@@ -347,5 +352,12 @@
   .btn-footer {
     width: 100%;
     justify-content: center;
+  }
+
+  .footer-col p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
   }
 }
