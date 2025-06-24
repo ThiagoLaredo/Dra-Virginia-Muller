@@ -1,6 +1,6 @@
 :root {
   /* Cores principais baseadas no logo */
-  --primary: #928071;    /* Tom terroso do logo (cor primária) */
+  --primary: #7a6a5d;    /* Tom terroso do logo (cor primária) */
   --primary-light: #c4b8ad; /* Versão mais clara da primária */
   --primary-soft: #e8e2dc; /* Versão quase branca da primária */
   
@@ -12,7 +12,7 @@
   /* Neutros elegantes */
   --bg-light: #f8f6f4;    /* Fundo claro com leve tom terroso */
   --bg-soft: #f0ece8;     /* Fundo secundário */
-  --bg-accent: rgba(224, 203, 184, 0.45);   /* Para destaques sutis */
+  --bg-accent: rgba(224, 203, 184, 1);   /* Para destaques sutis */
   
   /* Textos */
   --text-dark: #0A0203;   /* Usando o preto do logo */

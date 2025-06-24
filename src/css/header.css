@@ -113,7 +113,7 @@
   .header.header-scrolled {
     /* backdrop-filter: blur(8px); */
     /* -webkit-backdrop-filter: blur(8px); */
-    background-color: #faf9f7;
+    background-color: var(--bg-light); /* Fundo mais claro */
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   }
   

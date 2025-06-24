@@ -41,7 +41,7 @@ export const initPageOpenAnimations = () => {
   tracadoPaths.forEach(path => {
     const length = path.getTotalLength();
 
-    path.style.stroke = "#928071";
+    path.style.stroke = "#7a6a5d";
     path.style.fill = "none";
     path.style.strokeWidth = 1;
     path.style.strokeDasharray = length;

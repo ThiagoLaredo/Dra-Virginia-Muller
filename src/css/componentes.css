@@ -90,9 +90,9 @@
 
 /* ===== BOTÕES DO FOOTER ===== */
 .btn-footer {
-  background-color: var(--primary-light); /* Nude claro */
+  background-color: var(--primary); /* Nude claro */
   color: var(--text-light);
-  border: 2px solid var(--primary-light);
+  border: 2px solid var(--primary);
 }
 
 .btn-footer:hover {
