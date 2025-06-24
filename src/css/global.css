@@ -1,7 +1,8 @@
 :root {
   /* Cores principais baseadas no logo */
-  --primary: #7a6a5d;    /* Tom terroso do logo (cor primária) */
-  --primary-light: #c4b8ad; /* Versão mais clara da primária */
+  --primary: #928071;    /* Tom terroso do logo (cor primária) */
+  --primary-light: #b4a99e; /* Versão mais clara da primária */
+  --primary-light2: #c4b8ad; /* Versão mais clara da primária */
   --primary-soft: #e8e2dc; /* Versão quase branca da primária */
   
   /* Cores de destaque e contrastes */
@@ -25,7 +26,7 @@
   --shadow-dark: 0 6px 24px rgba(10, 2, 3, 0.15);
   
   /* Cores de estado */
-  --hover-primary: #7a6a5d; /* Primária escurecida para hovers */
+  --hover-primary: #6c5d52; /* Primária escurecida para hovers */
   --active-primary: #6b5d52; /* Primária mais escura ainda */
 }
 
