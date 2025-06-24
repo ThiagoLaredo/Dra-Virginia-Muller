@@ -121,3 +121,13 @@
 
 /* Navbar, footer (se não estiverem no HTML principal) */
 /* ... */
+
+@media (max-width: 768px) {
+
+  .btn-footer {
+
+
+  min-width: none;
+  width: 100%;
+  }
+}

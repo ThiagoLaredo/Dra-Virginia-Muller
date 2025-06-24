@@ -41,7 +41,7 @@
 }
 
 .footer-title {
-  color: #7a6a5d; /* Versão 20% mais escura */
+  color: #6c5d52; /* Versão 20% mais escura */
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   position: relative;
@@ -50,6 +50,7 @@
 
 .lista-agendamento .footer-title {
   color: white;
+  font-size: 1.6rem;
 }
 
 .lista-agendamento .footer-title::after {
@@ -265,7 +266,7 @@
 @media (max-width: 768px) {
 
   .lista-agendamento .footer-title::after {
-    background: linear-gradient(90deg, transparent 0%, var(--primary-light) 50%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, white 50%, transparent 100%);
   }
 
 
@@ -350,6 +351,7 @@
   }
   
   .btn-footer {
+    min-width: none !important;
     width: 100%;
     justify-content: center;
   }
