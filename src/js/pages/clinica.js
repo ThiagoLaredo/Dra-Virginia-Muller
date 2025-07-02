@@ -1,5 +1,5 @@
 import "../../css/global.css";
-import "../../css/home.css";
+import "../../css/clinica.css";
 import "../../css/header.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriterAnimations();
     new FormHandler();
 
-    const swiperEl = document.querySelector('.agents-swiper');
+    const swiperEl = document.querySelector('.clinica-slider');
     if (swiperEl) {
         new SwiperClinicaSlider();
     }

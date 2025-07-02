@@ -1,0 +1,129 @@
+/* === CLINICA   === */
+.clinica-title {
+padding-top: calc(var(--header-height) + 1rem);
+padding-bottom: .8rem; /* Ou o valor desejado */
+background-color: rgba(224, 203, 184, 1);
+}
+
+.clinica-title h1 {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+font-size: 2.5rem;
+color: var(--primary);
+}  
+
+.clinica-content {
+padding: 4rem 0;
+display: flex;
+gap: 4rem;
+}
+
+
+/* Texto e benefícios */
+.clinica-text {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.clinica-text p {
+font-size: 1.4rem;
+line-height: 1.4;
+font-weight: 600;
+color: #cebd85;
+}
+
+/* Lista de benefícios */
+.clinica-beneficios {
+list-style: none;
+padding: 0;
+}
+
+.clinica-beneficios li {
+padding: 0.8rem 0;
+position: relative;
+padding-left: 2.5rem;
+color: var(--secondary-light);
+}
+
+.clinica-beneficios i {
+color: var(--primary);
+position: absolute;
+left: 0;
+top: 1rem;
+}
+
+.clinica-imagem {
+margin-top: -70px;
+position: relative;
+}
+
+.clinica-imagem img {
+width: 100%;
+height: auto;
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+.swiper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+.swiper-slide img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+color: var(--primary, #333);
+}
+
+.swiper-pagination-bullet {
+background: var(--primary, #333);
+opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+opacity: 1;
+}
+  
+/* Tablet (retrato) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+    .clinica-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+  }
+
+@media (max-width: 768px) {
+
+    .clinica-content {
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 0;
+    }
+    
+    .clinica-text p {
+        font-size: 1.2rem;
+    }
+    
+    .clinica-beneficios li {
+        padding-left: 1.5rem;
+    }
+
+    .clinica-imagem {
+        margin-top: 0;
+    }
+    
+    .clinica-imagem img {
+        width: 100%;
+        height: auto;
+    }
+}

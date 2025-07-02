@@ -45,34 +45,6 @@
 
   <body>
 
-    <!-- <header class="header home2">
-      <div class="container">
-        <div class="header_menu">
-          <a data-menu="logo" href="./index.html">
-            <span class="visually-hidden">Voltar para a página inicial</span>
-            <img src="./imgs/logo-escrito.svg" alt="Logo Dra. Virgínia Müller" width="260" height="auto">
-
-              
-          </a>          
-          <nav class="menu">
-            <button data-menu="button" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">
-              <span id="hamburguer"></span>
-            </button>  
-            <ul data-menu="list" id="menu">
-              <li><a href="./">Sobre</a></li>
-              <li><a href="./">Áreas de Atuação</a></li>
-              <li><a href="./">Clínica</a></li>
-              <li><a href="./">Na Mídia</a></li>
-              <li><a href="./">Contato</a></li>
-            </ul>
-          </nav>
-        </div>   
-        <div class="header_acoes">
-          <a href="./" class="btn-agendar" target="_blank">Agende sua consulta</a>  
-        </div>
-    </header>  -->
-
-
     <header class="header home2">
       <div class="container">
         <div class="header_menu">
@@ -90,17 +62,17 @@
                 <span id="hamburguer"></span>
               </button>
               <ul data-menu="list" id="menu">
-                  <li><a href="./">Sobre</a></li>
-                  <li><a href="./">Áreas de Atuação</a></li>
-                  <li><a href="./">Clínica</a></li>
+                  <li><a href="./sobre.html">Sobre</a></li>
+                  <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
+                  <li><a href="./clinica.html">Clínica</a></li>
                   <li><a href="./">Na Mídia</a></li>
-                  <li><a href="./">Contato</a></li>
+                  <li><a href="#contato">Contato</a></li>
                 </ul>              
             </nav>
             
             <!-- Ações -->
             <div class="header_acoes">
-              <a href="./" class="btn-agendar" target="_blank">Agende sua consulta</a>
+              <a href="#contato" class="btn-agendar" target="_blank">Agende sua consulta</a>
             </div>
           </div>
         </div>
@@ -118,7 +90,7 @@
     </a>
 
   <!-- Seção Hero (Intro) -->
-  <section class="intro">
+  <section id="intro" class="intro">
     <div class="container">
       <div class="simbolo" id="simbolo-animado">
         <svg width="360" height="279" viewBox="0 0 360 279" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,128 +114,124 @@
   </section>
 
 <!-- Áreas de atuação -->
-<section class="areas-atuacao">
-  <div class="container animate-me animate-up">
-    <div class="areas-titulo">
-      <h2 class="text-center">Áreas de Atuação</h2>
+  <section id="areas-atuacao" class="areas-atuacao">
+    <div class="container animate-me animate-up">
+      <div class="areas-titulo">
+        <h2 class="text-center">Áreas de Atuação</h2>
+      </div>
+      <div class="areas-grid animate-me animate-left">
+        <div class="area-card">
+          <h3>Cirurgia robótica urológica</h3>
+          <p>Técnicas avançadas para procedimentos de precisão com recuperação mais rápida.</p>
+        </div>
+        <div class="area-card">
+          <h3>Laser íntimo</h3>
+          <p>Tratamentos funcionais e estéticos para saúde íntima feminina e masculina.</p>
+        </div>
+        <div class="area-card">
+          <h3>Urodinâmica</h3>
+          <p>Avaliação completa da função urinária para diagnóstico preciso.</p>
+        </div>
+        <div class="area-card">
+          <h3>Uro-oncologia</h3>
+          <p>Diagnóstico e tratamento de cânceres do trato urinário.</p>
+        </div>
+      </div>
+      <!-- <a href="#" class="btn-ver-todas animate-me animate-up">Ver todas as áreas</a> -->
     </div>
-    <div class="areas-grid animate-me animate-left">
-      <div class="area-card">
-        <h3>Cirurgia robótica urológica</h3>
-        <p>Técnicas avançadas para procedimentos de precisão com recuperação mais rápida.</p>
-      </div>
-      <div class="area-card">
-        <h3>Laser íntimo</h3>
-        <p>Tratamentos funcionais e estéticos para saúde íntima feminina e masculina.</p>
-      </div>
-      <div class="area-card">
-        <h3>Urodinâmica</h3>
-        <p>Avaliação completa da função urinária para diagnóstico preciso.</p>
-      </div>
-      <div class="area-card">
-        <h3>Uro-oncologia</h3>
-        <p>Diagnóstico e tratamento de cânceres do trato urinário.</p>
-      </div>
-    </div>
-    <!-- <a href="#" class="btn-ver-todas animate-me animate-up">Ver todas as áreas</a> -->
-  </div>
-</section>
+  </section>
 
 <!-- Sobre a Dra. - Versão com Background Image -->
-<section class="sobre-dra">
-  <div class="container animate-me animate-left">
-    <div class="sobre-text">
-      <!-- <h2>Dra. Virgínia Müller</h2> -->
-      <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p>
-    </div>
-
-    <div class="box-text animate-me animate-left">
-      <h2>Sobre</h2>
-      <p>Especialista em cirurgias robóticas, laser íntimo e urodinâmica, a Dra. Virgínia oferece tratamentos modernos, minimamente invasivos e altamente eficazes, sempre com foco na saúde, conforto e qualidade de vida dos seus pacientes.</p>
-    </div>
-    <div class="sobre-imagem animate-me animate-right">
-      <img src="./imgs/DRA-VIRGINIA.webp" alt="Dra. Virgínia Müller" class="animate-me animate-right"> 
-    </div>
-    <div class="sobre-btn">
-      <a href="#contato" class="btn-agendar animate-me animate-up">Saiba Mais</a>
-  </div>
-</section>
-
-<!-- <section class="banner animate-me animate-fade"></section> -->
-
-
-
-<footer class="site-footer">
-  <div class="container">
-
-    <div class="footer-grid agendamento">
-      <div  class="footer-col lista-agendamento">
-        <h3 class="footer-title">Agende sua consulta</h3>
-        <p><i class="fas fa-phone-alt"></i> <a>(54) 99999-9999</a></p>
-        <p><i class="fab fa-whatsapp"></i> <a>(54) 99999-9999</a></p>
-        <p><i class="far fa-envelope"></i> <a>contato@dravirginia.com.br</a></p>
-      </div>
-      <div class="footer-col form-agendamento animate-me animate-up">
-        <form class="form-contato" action="#" method="POST">
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" id="nome" name="nome" placeholder="Nome" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="E-mail" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-          </div>
-          <button type="submit" class="btn-footer">Enviar</button>
-        </form>       
+  <section id="sobre" class="sobre-dra">
+    <div class="container animate-me animate-left">
+      <div class="sobre-text">
+        <!-- <h2>Dra. Virgínia Müller</h2> -->
+        <p>Referência em urologia com atuação voltada tanto para homens quanto mulheres, unindo conhecimento técnico, tecnologia de ponta e olhar individualizado.</p>
       </div>
 
+      <div class="box-text animate-me animate-left">
+        <h2>Sobre</h2>
+        <p>Especialista em cirurgias robóticas, laser íntimo e urodinâmica, a Dra. Virgínia oferece tratamentos modernos, minimamente invasivos e altamente eficazes, sempre com foco na saúde, conforto e qualidade de vida dos seus pacientes.</p>
+      </div>
+      <div class="sobre-imagem animate-me animate-right">
+        <img src="./imgs/DRA-VIRGINIA.webp" alt="Dra. Virgínia Müller" class="animate-me animate-right"> 
+      </div>
+      <div class="sobre-btn">
+        <a href="#contato" class="btn-agendar animate-me animate-up">Saiba Mais</a>
     </div>
+  </section>
 
-    <div class="footer-grid animate-me animate-up">
-      <!-- Coluna 1 - Logo e Redes Sociais -->
-      <div class="footer-col logo-col">
-        <h3 class="footer-title">Dra. Virgínia Müller</h3>
-        <p class="footer-credenciais">CREMERS 24.804 | RQE 16942</p>
-        
-        <div class="social-icons">
-          <a href="https://www.instagram.com/virginiamuller.uro/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
-          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <footer id="contato" class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid agendamento">
+        <div  class="footer-col lista-agendamento">
+          <h3 class="footer-title">Agende sua consulta</h3>
+          <p><i class="fas fa-phone-alt"></i> <a>(54) 99999-9999</a></p>
+          <p><i class="fab fa-whatsapp"></i> <a>(54) 99999-9999</a></p>
+          <p><i class="far fa-envelope"></i> <a>contato@dravirginia.com.br</a></p>
+        </div>
+        <div class="footer-col form-agendamento animate-me animate-up">
+          <form class="form-contato" action="#" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn-footer">Enviar</button>
+          </form>       
+        </div>
+
+      </div>
+
+      <div class="footer-grid animate-me animate-up">
+        <!-- Coluna 1 - Logo e Redes Sociais -->
+        <div class="footer-col logo-col">
+          <h3 class="footer-title">Dra. Virgínia Müller</h3>
+          <p class="footer-credenciais">CREMERS 24.804 | RQE 16942</p>
+          
+          <div class="social-icons">
+            <a href="https://www.instagram.com/virginiamuller.uro/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Coluna 2 - Endereço -->
+        <div class="footer-col">
+          <h3 class="footer-title">Onde Estamos</h3>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> R. Moreira César, 2821</p>
+            <p>Centro, Caxias do Sul/RS</p>
+            <p>CEP 95034-000</p>
+          </address>
+        </div>
+
+        <!-- Coluna 3 - Horários -->
+        <div class="footer-col">
+          <h3 class="footer-title">Horário de Atendimento</h3>
+          <p><i class="far fa-clock"></i> Segunda a Sexta: 08:45 às 18h</p>
+          <p><i class="fas fa-calendar-check"></i> Agendamento prévio</p>
         </div>
       </div>
 
-      <!-- Coluna 2 - Endereço -->
-      <div class="footer-col">
-        <h3 class="footer-title">Onde Estamos</h3>
-        <address>
-          <p><i class="fas fa-map-marker-alt"></i> R. Moreira César, 2821</p>
-          <p>Centro, Caxias do Sul/RS</p>
-          <p>CEP 95034-000</p>
-        </address>
-      </div>
-
-      <!-- Coluna 3 - Horários -->
-      <div class="footer-col">
-        <h3 class="footer-title">Horário de Atendimento</h3>
-        <p><i class="far fa-clock"></i> Segunda a Sexta: 08:45 às 18h</p>
-        <p><i class="fas fa-calendar-check"></i> Agendamento prévio</p>
+      <div class="footer-bottom animate-me animate-left">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Dra. Virgínia Müller - Todos os direitos reservados</p>
+        <p>Desenvolvido com <i class="fas fa-heart"></i>por Olatu</p>
       </div>
     </div>
-
-    <div class="footer-bottom animate-me animate-left">
-      <p>&copy; <script>document.write(new Date().getFullYear())</script> Dra. Virgínia Müller - Todos os direitos reservados</p>
-      <p>Desenvolvido com <i class="fas fa-heart"></i>por Olatu</p>
-    </div>
-  </div>
-</footer>
+  </footer>
    
   </body>
 </html>

@@ -1,5 +1,5 @@
 import "../../css/global.css";
-import "../../css/home.css";
+import "../../css/sobre.css";
 import "../../css/header.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
@@ -13,7 +13,7 @@ import HeaderManager from '../modules/HeaderManager.js';
 import HeaderScroll from '../modules/header-scroll.js';
 import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations, initTypewriterAnimations } from '../modules/animations.js';
-import SwiperClinicaSlider from '../modules/SwiperClinicaSlider.js';
+import SwiperSobreSlider from '../modules/SwiperSobreSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -96,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initTypewriterAnimations();
     new FormHandler();
 
-    const swiperEl = document.querySelector('.agents-swiper');
+    const swiperEl = document.querySelector('.sobre-slider');
     if (swiperEl) {
-        new SwiperClinicaSlider();
+        new SwiperSobreSlider();
     }
 });

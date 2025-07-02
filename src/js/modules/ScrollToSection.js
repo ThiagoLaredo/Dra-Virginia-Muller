@@ -1,5 +1,3 @@
-// src/js/modules/ScrollToSection.js
-
 export default class ScrollToSection {
   constructor(triggerSelector, offset = 50) {
     this.triggers = document.querySelectorAll(triggerSelector);
@@ -18,9 +16,12 @@ export default class ScrollToSection {
     event.preventDefault();
 
     const button = event.currentTarget;
-    const targetSelector =
-      button.getAttribute("data-target") ||
-      button.getAttribute("href");
+    const targetSelector = button.getAttribute("href"); // Pega apenas o href
+    
+    // Verifica se é um link âncora válido
+    if (!targetSelector || !targetSelector.startsWith('#')) {
+      return; // Ignora links que não são âncoras
+    }
 
     const target = document.querySelector(targetSelector);
     if (target) {
