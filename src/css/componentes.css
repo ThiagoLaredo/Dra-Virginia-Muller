@@ -124,10 +124,6 @@
 
 @media (max-width: 768px) {
 
-  .btn-footer {
+.btn-agendar {font-size: 1.2rem;}
 
-
-  min-width: none;
-  width: 100%;
-  }
 }
