@@ -1,7 +1,6 @@
 
 /* ===== SEÇÃO INTRO ===== */
 
-
 .intro {
   padding: calc(var(--header-height) + 2rem) 0;
   background-color: rgba(224, 203, 184, 1); /* Equivalente a #e0cbb885 */
@@ -15,22 +14,6 @@
   background-blend-mode: soft-light;
   opacity: 0;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-
-.banner {
-  background: 
-    linear-gradient(rgba(146, 128, 113, 0.5), rgba(146, 128, 113, 0.5)),
-    url('../imgs/areas-atuacao.webp');
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  background-position: 50% 2%;
-  background-size: cover;
-  display: flex;
-  height: 50vh;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
 }
 
 
@@ -91,52 +74,88 @@ visibility: hidden;
   margin-left: 70px;
 }
 
-/* ===== SEÇÃO DESTAQUES ===== */
-.destaques {
-  padding: 4rem 0;
-  background: var(--bg-soft);
-  position: relative;
+
+/* ===== ÁREAS DE ATUAÇÃO ===== */
+
+.banner {
+  background-attachment: scroll;
 }
 
-.destaques .container {
+.areas-atuacao {
+  padding-top: 5rem;
+}
+
+.areas-atuacao .container {
+  max-width: 1000px;
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
-.destaque-item {
-  flex: 1;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
+.areas-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
-  box-shadow: var(--shadow-light);
-  transition: all 0.3s ease;
+  color:var(--secondary-dark);
+}
+
+.areas-titulo p {
+  font-size: 1.1rem;
+}
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  grid-template-rows: repeat(2, 1fr);    /* 2 linhas */
+  gap: 0;                               /* Sem gap para bordas compartilhadas */
+  border: 1px solid var(--primary-color); /* Borda externa */
+  margin: 1rem 0;
+}
+
+.area-card {
+  padding: 2rem;
+  border: 2px solid var(--primary); /* Borda em todos os itens */
+  margin: -2px 0 0 -2px; /* Compensar para bordas duplas */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Garantir altura igual */
+}
+
+.area-card h3 {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.area-card h3 {
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+.area-card h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background-color: #cebd85;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 2px rgba(206, 189, 133, 0.3),
+    0 0 0 4px rgba(206, 189, 133, 0.1); /* Efeito de aura */
+}
+
+.area-card p {
   color: var(--secondary-light);
 }
 
-.destaque-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-medium);
-}
-
-.destaque-item i {
-  width: 50px;
-  height: 50px;
-  background: var(--primary-soft);
-  color: var(--primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  font-size: 1.4rem;
-  padding: 1rem;
-}
 
 /* ===== SEÇÃO SOBRE ===== */
 .sobre-dra {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 0 12rem 0;
   position: relative;
 
 }
@@ -228,83 +247,6 @@ height: auto;
 }
 
 
-/* ===== ÁREAS DE ATUAÇÃO ===== */
-
-.banner {
-  background-attachment: scroll;
-}
-
-.areas-atuacao {
-  padding: 4rem 0;
-  background-color: #fff;
-}
-
-.areas-atuacao .container {
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3rem;
-}
-
-.areas-titulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-  color:var(--secondary-dark);
-}
-
-.areas-titulo p {
-  font-size: 1.1rem;
-}
-.areas-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
-  grid-template-rows: repeat(2, 1fr);    /* 2 linhas */
-  gap: 0;                               /* Sem gap para bordas compartilhadas */
-  border: 1px solid var(--primary-color); /* Borda externa */
-  margin: 1rem 0;
-}
-
-.area-card {
-  padding: 2rem;
-  border: 2px solid var(--primary); /* Borda em todos os itens */
-  margin: -2px 0 0 -2px; /* Compensar para bordas duplas */
-  display: flex;
-  flex-direction: column;
-  min-height: 100%; /* Garantir altura igual */
-}
-
-.area-card h3 {
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-}
-
-.area-card h3 {
-  position: relative;
-  padding-left: 1.8rem;
-}
-
-.area-card h3::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 6px;
-  height: 6px;
-  background-color: #cebd85;
-  border-radius: 50%;
-  box-shadow: 
-    0 0 0 2px rgba(206, 189, 133, 0.3),
-    0 0 0 4px rgba(206, 189, 133, 0.1); /* Efeito de aura */
-}
-
-.area-card p {
-  color: var(--secondary-light);
-}
 
 
 /* ===== RESPONSIVO ===== */
@@ -347,11 +289,6 @@ height: auto;
     margin-left: 0;
   }
 
-  /* ===== SEÇÃO SOBRE ===== */
-  .sobre-dra {
-    padding: 5rem 0;
-  }
-
   .sobre-dra .container {
     display: flex;
     align-items: center;
@@ -369,7 +306,6 @@ height: auto;
   .sobre-dra {
     flex-direction: column;
     min-height: auto;
-    padding-top: 0rem
   }
 
   .sobre-dra-bg {

@@ -14,7 +14,7 @@ color: var(--primary);
 }  
 
 .clinica-content {
-padding: 4rem 0;
+padding: 5rem 0;
 display: flex;
 gap: 4rem;
 }
@@ -96,8 +96,8 @@ opacity: 1;
     .clinica-content {
         flex-direction: column;
         gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
   }
 
@@ -106,8 +106,8 @@ opacity: 1;
     .clinica-content {
         flex-direction: column;
         gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     
     .clinica-text p {

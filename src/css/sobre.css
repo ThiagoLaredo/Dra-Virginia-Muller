@@ -14,7 +14,7 @@
   }  
 
 .sobre-pg-content {
-    padding: 4rem 0;
+    padding: 5rem 0;
     display: flex;
     gap: 4rem;
 }
@@ -82,7 +82,7 @@
         flex-direction: column;
         gap: 2rem;
         padding-top: 2rem;
-        padding-bottom: 0;
+        padding-bottom: 2rem;
     }
 
     .swiper.sobre-slider {
@@ -95,12 +95,16 @@
     .sobre-pg-content {
         flex-direction: column;
         gap: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     
     .sobre-pg-text p {
         font-size: 1.2rem;
+    }
+
+    .sobre-pg-text p.destaque {
+        font-size: 1.4rem;
     }
 
     .swiper.sobre-slider {
