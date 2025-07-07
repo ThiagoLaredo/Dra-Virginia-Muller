@@ -41,17 +41,39 @@ export default class MenuMobile {
     }
   }
 
+  // closeMenu() {
+  //   if (this.isMobile()) {
+  //     this.menuOpened = false;
+  //     this.menuList.classList.remove(this.activeClass);
+  //     this.menuButton.classList.remove(this.activeClass);
+  //     this.contatoMobile.classList.remove(this.activeClass);
+  //     this.whatsappMobile.classList.remove(this.activeClass);
+  //     this.instagramMobile.classList.remove(this.activeClass);
+  //     if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
+  //     this.toggleMenuAnimation(false);
+  //     document.body.classList.remove('no-scroll');
+  //   }
+  // }
+
   closeMenu() {
     if (this.isMobile()) {
       this.menuOpened = false;
-      this.menuList.classList.remove(this.activeClass);
-      this.menuButton.classList.remove(this.activeClass);
-      this.contatoMobile.classList.remove(this.activeClass);
-      this.whatsappMobile.classList.remove(this.activeClass);
-      this.instagramMobile.classList.remove(this.activeClass);
-      if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
+      
+      // Primeiro esconde visualmente
       this.toggleMenuAnimation(false);
-      document.body.classList.remove('no-scroll');
+      
+      // Depois remove as classes com pequeno delay
+      setTimeout(() => {
+        this.menuList.classList.remove(this.activeClass);
+        this.menuButton.classList.remove(this.activeClass);
+        this.contatoMobile.classList.remove(this.activeClass);
+        this.whatsappMobile.classList.remove(this.activeClass);
+        this.instagramMobile.classList.remove(this.activeClass);
+        if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
+        this.toggleMenuAnimation(false);
+        // Remove outras classes como estava fazendo...
+        document.body.classList.remove('no-scroll');
+      }, 200); // Tempo ligeiramente maior que a animação
     }
   }
 
@@ -83,22 +105,41 @@ export default class MenuMobile {
   }
 
   animateMenuItems() {
-    const menuItems = document.querySelectorAll('.menu li');
-    menuItems.forEach((item, index) => {
-      gsap.fromTo(item,
-        { opacity: 0, y: 10 },
+    const menuItems = this.menuList.querySelectorAll('li');
+    
+    // Animação dos itens do menu (mantenha como está)
+    gsap.fromTo(menuItems,
+      { opacity: 0, y: 10 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        stagger: 0.1,
+        ease: "power2.out"
+      }
+    );
+  
+    // ANIMAÇÃO DO HEADER_AÇÕES (nova versão)
+    if (this.headerAcoes) {
+      // Primeiro garanta que está visível
+      gsap.set(this.headerAcoes, { display: 'flex' });
+      
+      // Depois anime
+      gsap.fromTo(this.headerAcoes,
+        { opacity: 0, y: 20 },
         {
-          opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + index * 0.1,
-          onComplete: () => gsap.set(item, { clearProps: "all" })
-        });
-    });
-
-        // Anima os botões de ação
-        if (this.headerAcoes) {
-          gsap.fromTo(this.headerAcoes,
-            { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.3 + menuItems.length * 0.1 });
+          opacity: 1,
+          y: 0,
+          duration: 0.5,
+          delay: 0.3, // Entra após os itens do menu
+          ease: "power2.out",
+          onComplete: () => {
+            // Garante estado final correto
+            gsap.set(this.headerAcoes, { clearProps: "transform,opacity" });
+          }
         }
+      );
+    }
 
     gsap.fromTo(this.contatoMobile,
       { opacity: 0, y: 10 },
@@ -117,23 +158,55 @@ export default class MenuMobile {
       { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + (menuItems.length + 1) * 0.1 });
   }
 
+  // toggleMenuAnimation(show) {
+  //   const menuList = document.querySelector('.js [data-menu="list"]');
+  //   if (show) {
+  //     gsap.to(menuList, {
+  //       duration: 0.5,
+  //       opacity: 1,
+  //       visibility: 'visible',
+  //       ease: 'power1.inOut',
+  //       onStart: () => menuList.style.display = 'flex'
+  //     });
+  //   } else {
+  //     gsap.to(menuList, {
+  //       duration: 0.5,
+  //       opacity: 0,
+  //       visibility: 'hidden',
+  //       ease: 'power1.inOut',
+  //       onComplete: () => menuList.style.display = 'none'
+  //     });
+  //   }
+  // }
+
   toggleMenuAnimation(show) {
     const menuList = document.querySelector('.js [data-menu="list"]');
+    const headerAcoes = this.headerAcoes;
+
+
+    // Primeiro forçar um reflow e resetar propriedades
+    gsap.set(menuList, { clearProps: "all" });
+    
     if (show) {
-      gsap.to(menuList, {
-        duration: 0.5,
-        opacity: 1,
-        visibility: 'visible',
-        ease: 'power1.inOut',
-        onStart: () => menuList.style.display = 'flex'
-      });
+      // Abrir menu - animação controlada apenas pelo GSAP
+      gsap.fromTo(menuList,
+        { opacity: 0, display: 'none' },
+        {
+          opacity: 1,
+          display: 'flex',
+          duration: 0.3,
+          ease: 'power2.out',
+          immediateRender: false // Importante para evitar flashes
+        });
     } else {
-      gsap.to(menuList, {
-        duration: 0.5,
+      // Fechar menu - animação mais rápida
+      gsap.to([menuList, headerAcoes], {
         opacity: 0,
-        visibility: 'hidden',
-        ease: 'power1.inOut',
-        onComplete: () => menuList.style.display = 'none'
+        duration: 0.2,
+        ease: 'power2.in',
+        onComplete: () => {
+          gsap.set([menuList, headerAcoes], { display: 'none' });
+        }
       });
     }
   }
