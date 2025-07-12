@@ -16,7 +16,6 @@
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
-
 .intro .container {
   display: flex;
   flex-direction: column;
@@ -74,7 +73,6 @@ visibility: hidden;
   margin-left: 70px;
 }
 
-
 /* ===== ÁREAS DE ATUAÇÃO ===== */
 
 .banner {
@@ -120,6 +118,7 @@ visibility: hidden;
   margin: -2px 0 0 -2px; /* Compensar para bordas duplas */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-height: 100%; /* Garantir altura igual */
 }
 
@@ -152,6 +151,9 @@ visibility: hidden;
   color: var(--secondary-light);
 }
 
+.btn-agendar.btn-atuacao {
+  align-self: center;
+}
 
 /* ===== SEÇÃO SOBRE ===== */
 .sobre-dra {
@@ -165,7 +167,6 @@ visibility: hidden;
   align-items: flex-start;
   gap: 4rem;
 }
-
 
 /* Container do texto */
 .sobre-text {
@@ -190,8 +191,31 @@ visibility: hidden;
   line-height: 1.4;
   font-weight: 600;
   color: #cebd85;
-  /* Garante que o parágrafo não quebre durante animação */
-  /* white-space: nowrap; */
+}
+
+.sobre-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 700px;
+}
+
+.sobre-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sobre-lista li i {
+  color: #cebd85;
+  font-size: 0.5rem;
+  line-height: 1;
+  margin-top: 0.5rem; /* Alinha visualmente com o topo da primeira linha */
+  flex-shrink: 0; /* Evita que a bolinha seja deformada ou redimensionada */
 }
 
 /* Cursor da máquina de escrever */
@@ -246,9 +270,6 @@ height: auto;
   right: 1.5rem;
 }
 
-
-
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
 
@@ -259,8 +280,7 @@ height: auto;
     background-position: center; /* Centraliza a imagem de fundo */
   }
 
-  .intro .container, 
-  .sobre-dra .container {
+  .intro .container {
     flex-direction: column;
   }
   
@@ -291,8 +311,9 @@ height: auto;
 
   .sobre-dra .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 0rem;
   }
 
   .sobre-image img {
@@ -325,12 +346,10 @@ height: auto;
   .box-text h2 {
     text-align: center;    }
 
-  /* Cursor da máquina de escrever */
-.sobre-text::after {
-
-  font-size: 1.8rem; /* 0.4rem maior que o texto */
-
-}
+    /* Cursor da máquina de escrever */
+  .sobre-text::after {
+    font-size: 1.8rem; /* 0.4rem maior que o texto */
+  }
 
   .sobre-text h2 {
     font-size: 1.75rem;
@@ -345,15 +364,17 @@ height: auto;
   }
 
   .box-text {
-    position: absolute;
+    position: static;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto; /* Centralização horizontal alternativa */
-    width: 88%; /* Largura controlada */
+    width: 100%; /* Largura controlada */
     max-width: 1200px; /* Limite máximo */
     /* Restante das propriedades mantidas */
     padding: 1.5rem;
+    order: 2;
+    margin-top: -100px;
   }
 
   .sobre-btn {
@@ -376,12 +397,6 @@ height: auto;
     flex-direction: column; /* Altera para coluna em mobile */
     grid-template-columns: 1fr; 
   }
-
-  /* .area-card {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  } */
 
   /* ===== SEÇÃO CLINICA ===== */
 
@@ -435,8 +450,4 @@ height: auto;
   .clinica-beneficios i {
     color: var(--primary-light);
   }
-
-  .sobre-imagem img {
-   margin-bottom: 60px;
-    }
 }
