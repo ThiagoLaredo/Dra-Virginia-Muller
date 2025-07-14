@@ -79,7 +79,7 @@
   
   .menu li a,
   .menu li span {
-    font: 500 1rem/1.2 'Montserrat', sans-serif; 
+    font: 500 1rem/1.2 'Space Grotesk', sans-serif;; 
     color: var(--primary); 
     /* text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3);  */
     text-decoration: none;

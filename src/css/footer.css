@@ -2,19 +2,19 @@
    FOOTER STYLES
    ====================== */
 
-   .site-footer {
-    background: linear-gradient(
-      to bottom, 
-      white 0%, 
-      white 30%,  /* Reduz a área branca */
-      var(--bg-accent) 30%,  /* Início mais cedo da cor secundária */
-      var(--bg-accent) 100%
-    );
-    color: var(--primary-light);
-    padding-bottom: 5rem;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+.site-footer {
+  background: linear-gradient(
+    to bottom, 
+    white 0%, 
+    white 30%,  /* Reduz a área branca */
+    var(--bg-accent) 30%,  /* Início mais cedo da cor secundária */
+    var(--bg-accent) 100%
+  );
+  color: var(--primary-light);
+  padding-bottom: 5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
 .footer-grid {
   display: grid;
@@ -77,6 +77,22 @@
   margin-bottom: 0.8rem;
   color: var(--secondary); 
 }
+.site-footer address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.site-footer a,
+.site-footer a * {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.site-footer a:hover,
+.site-footer a:hover * {
+  color: var(--primary); /* Cor suave para hover */
+}
 
 .site-footer i {
   /* Círculo perfeito */
@@ -106,7 +122,7 @@
 }
 
 .site-footer a:hover {
-  color: var(--primary-soft);
+  color: var(--secondary-light);
 }
 
 /* Botão do Rodapé */
@@ -178,7 +194,13 @@
 }
 
 .footer-bottom i.fa-heart {
-  color: var(--primary); /* Coração dourado */
+  color: var(--primary); 
+  margin-right: 0.4rem;
+}
+
+.footer-bottom i.fa-heart:hover {
+  color:#fff; 
+  margin-right: 0.2rem;
 }
 
 /* ======================
@@ -250,7 +272,7 @@
   .form-group input::placeholder,
   .form-group textarea::placeholder {
     color: var(--primary);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
     font-size: 0.95rem;
   }
   
@@ -316,7 +338,7 @@
   .form-group input::placeholder,
   .form-group textarea::placeholder {
     color: var(--primary);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
     font-size: 0.95rem;
     opacity: 0.7; /* Mais suave visualmente */
   }
