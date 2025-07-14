@@ -37,24 +37,16 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
   color: var(--secondary-dark);
   background: #fff;
   line-height: 1.6;
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--primary);
-}
-
-body {
-  font-family: 'Space Grotesk', sans-serif; /* Geometria limpa */
-}
-
-h1, h2, h3 {
   font-family: 'Spectral', serif; /* Híbrido moderno serif/sans */
   font-weight: 600; /* Peso médio para frescor */
+  color: var(--primary);
 }
 
 p {

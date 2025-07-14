@@ -85,7 +85,7 @@ tl.set("svg", { visibility: "visible" })
   opacity: 1,
   scale: 1,
   duration: 0.5
-}, "<-0.4") // <- antecipa em relação ao item anterior
+}, "<-0.9") // <- antecipa em relação ao item anterior
 
 .to(tracadoPaths, {
   strokeDashoffset: 0,
@@ -106,7 +106,7 @@ tl.set("svg", { visibility: "visible" })
 tl.set(".intro-text h1", { visibility: "visible" })
 .fromTo(".intro-text h1",
   { opacity: 0, y: 30 },
-  { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.4)" }, "<-1.5")
+  { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.4)" }, "<-2.5")
 
 .set(".intro-text p", { visibility: "visible" })
 .fromTo(".intro-text p",
@@ -143,7 +143,6 @@ tl.set(".intro-text h1", { visibility: "visible" })
   return tl;
 
 };
-
 
 export function initScrollAnimations() {
   console.log("initScrollAnimations() chamada!");
@@ -188,7 +187,6 @@ export function initScrollAnimations() {
     });
   });
 }
-
 
 export function initTypewriterAnimations() {
   const typeElements = document.querySelectorAll('.sobre-text p'); // Agora direcionando os parágrafos

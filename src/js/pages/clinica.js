@@ -4,7 +4,6 @@ import "../../css/header.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
 import "../../css/componentes.css";
-import "../../css/formulario-contato.css";
 
 // Adicione esta linha com as outras importações
 import ScrollToSection from '../modules/ScrollToSection.js';
