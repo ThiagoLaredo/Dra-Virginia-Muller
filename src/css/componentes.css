@@ -3,7 +3,7 @@
 .btn-saiba-mais,
 .btn-ver-todas,
 .btn-primary,
-.btn-outline, .btn-footer {
+.btn-outline, .btn-footer, .btn-midia  {
   display: inline-flex; /* Melhor alinhamento */
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 /* Botão Primário (Agendar) */
-.btn-agendar, .btn-primary {
+.btn-agendar, .btn-primary, .btn-midia {
   background-color: #cebd85;
   color: var(--text-light);
   border: 2px solid #cebd85; /* Borda sutil */
@@ -29,7 +29,7 @@
   overflow: hidden; /* Para efeito hover */
 }
 
-.btn-agendar:hover, .btn-primary:hover {
+.btn-agendar:hover, .btn-primary:hover, .btn-midia:hover {
   background-color: var(--hover-primary); /* Marrom claro no hover */
   border-color: var(--hover-primary);
   transform: translateY(-2px) scale(1.02); /* Efeito de levitação suave */

@@ -12,8 +12,9 @@ const path = require('path');
 
 const pages = [
   'index',
-  'clinica', 
-  'sobre'
+  'sobre',
+  'clinica',
+  'midia'
 ];
 
 // Entradas dinâmicas
