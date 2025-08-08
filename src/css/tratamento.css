@@ -1,0 +1,163 @@
+.sobre-pg-title {
+    padding-top: calc(var(--header-height) + 1rem);
+    padding-bottom: .8rem; /* Ou o valor desejado */
+    background-color: rgba(224, 203, 184, 1);
+}
+
+.sobre-pg-title h1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2.5rem;
+    color: var(--primary);
+}  
+
+.tratamento {
+    padding: 2rem 0;
+}
+
+.tratamento .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+
+.tratamento-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tratamento-content .destaque {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #cebd85;
+    margin-bottom: .5rem;
+}
+
+.tratamento-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: var(--secondary-light);
+    margin-bottom: 0.5rem;
+}
+
+.tratamento-content p strong {
+    font-weight: 600;
+    color: var(--primary-light);
+}
+
+.tratamento-content ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    color: var(--secondary-light);
+    padding-left: 1.2rem; /* Garante espaço à esquerda para os bullets */
+    list-style-position: outside;
+}
+
+.tratamento-content li {
+    margin-bottom: 1rem;
+}
+  
+.tratamento-content ul li::marker {
+    color: #cebd85;
+}
+
+.tratamento-content h3 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--primary);
+    margin-bottom: .5rem;
+}
+
+.tratamento-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    /* Título da página */
+    .sobre-pg-title {
+      padding-top: calc(var(--header-height) + 1rem);
+      padding-bottom: 1rem;
+      text-align: left;
+    }
+  
+    .sobre-pg-title h1 {
+      font-size: 2rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    /* Seção tratamento */
+    .tratamento {
+      padding: 2rem 0;
+    }
+  
+    .tratamento .container {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .tratamento-content {
+      width: 100%;
+      gap: 1rem;
+    }
+  
+    .tratamento-content .destaque {
+      font-size: 1.4rem;
+      line-height: 1.5;
+      margin-bottom: .5rem;
+    }
+  
+    .tratamento-content p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+  
+    .tratamento-content p strong {
+      font-size: 1.05rem;
+    }
+  
+    .tratamento-content ul {
+      font-size: 0.95rem;
+      padding-left: 1rem;
+    }
+  
+    .tratamento-content li {
+      margin-bottom: 0.8rem;
+    }
+  
+    .tratamento-content h3 {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: .5rem;
+    }
+  
+    .tratamento-image {
+      width: 100%;
+      gap: 1.5rem;
+    }
+
+    .tratamento-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+  }
+  

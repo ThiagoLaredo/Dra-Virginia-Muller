@@ -149,6 +149,35 @@ visibility: hidden;
 
 .area-card p {
   color: var(--secondary-light);
+  margin-bottom: 0.5rem;
+}
+
+.card-link {
+  color: #cebd85;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  transition: color 0.3s ease;
+}
+
+.card-link::after {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900; /* Ícones sólidos */
+  content: '\f061'; /* fa-arrow-right */
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card-link:hover {
+  color: var(--primary);
+}
+
+.card-link:hover::after {
+  transform: translateX(4px); /* seta se move suavemente para a direita */
+  color: var(--primary);
 }
 
 .btn-agendar.btn-atuacao {
