@@ -264,4 +264,36 @@
     padding: 1rem;
     opacity: 0;
   }
+
+  .submenu {
+    display: none;
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    padding-left: 1rem;
+  }
+
+  .submenu li a {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    display: block;
+    color: var(--primary);
+  }
+
+  /* Classe para exibir submenu no mobile */
+  .submenu.active {
+    display: block;
+  }
+
+  /* Indicador de seta no mobile */
+  .has-submenu > a::after {
+    content: " ▶";
+    font-size: 0.7rem;
+    float: right;
+  }
+
+  .has-submenu.open > a::after {
+    content: " ▼";
+  }
+  
 }
