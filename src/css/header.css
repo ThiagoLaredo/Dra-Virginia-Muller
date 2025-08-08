@@ -107,7 +107,48 @@
   .menu li a:hover::after {
     width: 100%;
   }
-  
+
+  /* Submenu - Desktop */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu > a::after {
+  content: " ▼";
+  font-size: 0.6rem;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  min-width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.submenu li a:hover {
+  background-color: var(--bg-light);
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
   
   /* Efeito no scroll */
   .header.header-scrolled {
