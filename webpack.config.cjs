@@ -12,6 +12,10 @@ const path = require('path');
 
 const pages = [
   'index',
+  'uradinamico',
+  'laser',
+  'cirurgia-robotica',
+  'radiofrequencia-ginecologica',
   'sobre',
   'clinica',
   'midia'
