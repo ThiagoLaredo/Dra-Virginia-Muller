@@ -54,136 +54,137 @@
   }
 
   /* Logo alinhado à esquerda */
-[data-menu="logo"] {
+  [data-menu="logo"] {
   margin-right: auto; /* Empurra tudo para a direita */
-}
+  }
 
-/* Menu e ações alinhados à direita */
-.menu-container {
-  display: flex;
-  align-items: center;
-  gap: 3rem; /* Espaço entre menu e botão */
-}
-
-/* Ajuste para o menu mobile */
-[data-menu="button"] {
-  margin-left: auto; /* Mantém o botão hamburger à direita */
-}
-  
-  ul[data-menu="list"] {
+  /* Menu e ações alinhados à direita */
+  .menu-container {
     display: flex;
-    list-style: none;
-    gap: 1.8rem;
     align-items: center;
-  }
-  
-  .menu li a,
-  .menu li span {
-    font: 500 1rem/1.2 'Space Grotesk', sans-serif;; 
-    color: var(--primary); 
-    /* text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3);  */
-    text-decoration: none;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  /* Sublinhado animado */
-  .menu li a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary); /* Laranja */
-    transition: width 0.3s ease;
-  }
-  
-  .menu li a:hover {
-    color: var(--primary); /* Laranja no hover */
-  }
-  
-  .menu li a:hover::after {
-    width: 100%;
+    gap: 3rem; /* Espaço entre menu e botão */
   }
 
-  /* Submenu - Desktop */
-.has-submenu {
-  position: relative;
-}
-
-.has-submenu > a::after {
-  content: " ▼";
-  font-size: 0.6rem;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  list-style: none;
-  padding: 0.5rem 0;
-  margin: 0;
-  min-width: 220px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  border-radius: 4px;
-  z-index: 1000;
-}
-
-.submenu li a {
-  display: block;
-  padding: 0.6rem 1rem;
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.submenu li a:hover {
-  background-color: var(--bg-light);
-}
-
-.has-submenu:hover .submenu {
-  display: block;
-}
-
-  
-  /* Efeito no scroll */
-  .header.header-scrolled {
-    /* backdrop-filter: blur(8px); */
-    /* -webkit-backdrop-filter: blur(8px); */
-    background-color: var(--bg-light); /* Fundo mais claro */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  /* Ajuste para o menu mobile */
+  [data-menu="button"] {
+    margin-left: auto; /* Mantém o botão hamburger à direita */
   }
-  
-  .header-scrolled .logo-svg {
-    width: 160px; /* Logo reduz levemente */
-  }
-
-  @media (max-width: 768px) {
-    
-    .header .container {
-      display: block;
-    }
-    
-  }
-
-  
-  
-  /* Responsivo */
-  @media (max-width: 992px) {
-    .header_menu {
-      gap: 1.5rem;
-    }
     
     ul[data-menu="list"] {
-      gap: 1rem;
+      display: flex;
+      list-style: none;
+      gap: 1.8rem;
+      align-items: center;
+      text-align: center;
     }
     
-    .btn-agendar {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.9rem;
+    .menu li a,
+    .menu li span {
+      font: 500 1rem/1.2 'Space Grotesk', sans-serif;; 
+      color: var(--primary); 
+      /* text-shadow: 1px 1px 2px rgba(245, 240, 232, 0.3);  */
+      text-decoration: none;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
     }
+    
+    /* Sublinhado animado */
+    .menu li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary); /* Laranja */
+      transition: width 0.3s ease;
+    }
+    
+    .menu li a:hover {
+      color: var(--primary); /* Laranja no hover */
+    }
+    
+    .menu li a:hover::after {
+      width: 100%;
+    }
+
+    /* Submenu - Desktop */
+  .has-submenu {
+    position: relative;
   }
+
+  .has-submenu > a::after {
+    content: " ▼";
+    font-size: 0.6rem;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    min-width: 220px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 4px;
+    z-index: 1000;
+  }
+
+  .submenu li a {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .submenu li a:hover {
+    background-color: var(--bg-light);
+  }
+
+  .has-submenu:hover .submenu {
+    display: block;
+  }
+
+    
+    /* Efeito no scroll */
+    .header.header-scrolled {
+      /* backdrop-filter: blur(8px); */
+      /* -webkit-backdrop-filter: blur(8px); */
+      background-color: var(--bg-light); /* Fundo mais claro */
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    }
+    
+    .header-scrolled .logo-svg {
+      width: 160px; /* Logo reduz levemente */
+    }
+
+    @media (max-width: 768px) {
+      
+      .header .container {
+        display: block;
+      }
+      
+    }
+
+    
+    
+    /* Responsivo */
+    @media (max-width: 992px) {
+      .header_menu {
+        gap: 1.5rem;
+      }
+      
+      ul[data-menu="list"] {
+        gap: 1rem;
+      }
+      
+      .btn-agendar {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+      }
+    }

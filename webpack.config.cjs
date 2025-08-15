@@ -16,8 +16,10 @@ const pages = [
   'laser-intimo',
   'cirurgia-robotica-urologica',
   'radiofrequencia-ginecologica',
+  'uro-oncologia',
   'sobre',
   'clinica',
+  'incontinencia-urinaria',
   'midia'
 ];
 

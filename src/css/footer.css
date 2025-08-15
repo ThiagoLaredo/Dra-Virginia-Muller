@@ -89,10 +89,10 @@
   transition: color 0.3s ease;
 }
 
-.site-footer a:hover,
+/* .site-footer a:hover,
 .site-footer a:hover * {
-  color: var(--primary); /* Cor suave para hover */
-}
+  color: var(--primary); 
+} */
 
 .site-footer i {
   /* Círculo perfeito */
