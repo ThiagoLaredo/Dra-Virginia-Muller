@@ -41,20 +41,6 @@ export default class MenuMobile {
     }
   }
 
-  // closeMenu() {
-  //   if (this.isMobile()) {
-  //     this.menuOpened = false;
-  //     this.menuList.classList.remove(this.activeClass);
-  //     this.menuButton.classList.remove(this.activeClass);
-  //     this.contatoMobile.classList.remove(this.activeClass);
-  //     this.whatsappMobile.classList.remove(this.activeClass);
-  //     this.instagramMobile.classList.remove(this.activeClass);
-  //     if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
-  //     this.toggleMenuAnimation(false);
-  //     document.body.classList.remove('no-scroll');
-  //   }
-  // }
-
   closeMenu() {
     if (this.isMobile()) {
       this.menuOpened = false;
@@ -80,11 +66,48 @@ export default class MenuMobile {
   addMenuMobileEvents() {
     this.menuButton.addEventListener('click', this.openMenu);
     this.menuList.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A') {
+      const target = event.target;
+    
+      // Se clicou em botão de submenu
+      if (target.tagName === "BUTTON" && target.parentElement.classList.contains("has-submenu")) {
+        if (this.isMobile()) {
+          event.preventDefault();
+          target.parentElement.classList.toggle("open");
+        }
+        return; // não fecha o menu
+      }
+    
+      // Se clicou em link normal (<a>), fecha o menu
+      if (target.tagName === "A") {
         this.closeMenu();
       }
     });
+    
   }
+
+  addSubmenuEvents() {
+    const submenuParents = this.menuList.querySelectorAll(".has-submenu > a");
+  
+    submenuParents.forEach(link => {
+      link.addEventListener("click", (e) => {
+        if (this.isMobile()) {
+          e.preventDefault(); // impede ir para o link direto
+          const parentLi = link.parentElement;
+  
+          // Fecha outros submenus antes de abrir o clicado
+          this.menuList.querySelectorAll(".has-submenu").forEach(li => {
+            if (li !== parentLi) {
+              li.classList.remove("open");
+            }
+          });
+  
+          // Alterna o submenu atual
+          parentLi.classList.toggle("open");
+        }
+      });
+    });
+  }
+  
 
   addLinkClickEvents() {
     const links = this.menuList.querySelectorAll('a');
@@ -158,27 +181,6 @@ export default class MenuMobile {
       { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + (menuItems.length + 1) * 0.1 });
   }
 
-  // toggleMenuAnimation(show) {
-  //   const menuList = document.querySelector('.js [data-menu="list"]');
-  //   if (show) {
-  //     gsap.to(menuList, {
-  //       duration: 0.5,
-  //       opacity: 1,
-  //       visibility: 'visible',
-  //       ease: 'power1.inOut',
-  //       onStart: () => menuList.style.display = 'flex'
-  //     });
-  //   } else {
-  //     gsap.to(menuList, {
-  //       duration: 0.5,
-  //       opacity: 0,
-  //       visibility: 'hidden',
-  //       ease: 'power1.inOut',
-  //       onComplete: () => menuList.style.display = 'none'
-  //     });
-  //   }
-  // }
-
   toggleMenuAnimation(show) {
     const menuList = document.querySelector('.js [data-menu="list"]');
     const headerAcoes = this.headerAcoes;
@@ -215,7 +217,10 @@ export default class MenuMobile {
     if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents();
+      this.addSubmenuEvents(); // <-- ADICIONA ISSO
     }
     return this;
   }
+  
+  
 }

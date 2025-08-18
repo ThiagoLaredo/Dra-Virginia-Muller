@@ -109,14 +109,38 @@
       width: 100%;
     }
 
+    .btn-submenu {
+      font: 500 1rem/1.2 'Space Grotesk', sans-serif;; 
+      padding: 0.5rem 0;
+      font-size: 1rem;
+      display: inline-flex; /* ou flex */
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem; /* Espaço entre texto e ícone */
+      /* padding-right: 1rem;  */
+      position: relative; /* Mantém para posicionamento absoluto se necessário */      color: var(--primary);
+      background: none;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-family: inherit; /* para garantir que use a mesma fonte */
+  }
+
+  .btn-submenu::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f078"; /* Código Unicode do ícone fa-chevron-down */
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-submenu:hover::after {
+    transform: rotate(180deg);
+  }
+
     /* Submenu - Desktop */
   .has-submenu {
     position: relative;
-  }
-
-  .has-submenu > a::after {
-    content: " ▼";
-    font-size: 0.6rem;
   }
 
   .submenu {
