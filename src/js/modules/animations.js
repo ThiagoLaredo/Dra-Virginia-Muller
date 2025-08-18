@@ -8,10 +8,11 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 export const initPageOpenAnimations = () => {
   // 1. Configurações iniciais
-  gsap.set("[data-menu='logo'], [data-menu='button'], #menu > li > a, #menu > li > span, .header_acoes a, .intro-text *, .page-open-animate, svg", {
+  gsap.set("[data-menu='logo'], [data-menu='button'], #menu > li > a, #menu > li > span, #menu > li > button, .header_acoes a, .intro-text *, .page-open-animate, svg", {
     opacity: 0,
     visibility: "hidden"
   });
+
 
   gsap.set(".page-open-animate", {
     y: 30
@@ -65,8 +66,10 @@ tl.set("[data-menu='logo']", { visibility: "visible" })
 .set("[data-menu='button']", { visibility: "visible" })
 .to("[data-menu='button']", { opacity: 1, duration: 0.6 }, ">0.2")
 
-.set("#menu > li > a, #menu > li > span", { visibility: "visible" })
-.to("#menu > li > a, #menu > li > span", {
+.set("#menu > li > a, #menu > li > span, #menu > li > button", { 
+  visibility: "visible" 
+})
+.to("#menu > li > a, #menu > li > span, #menu > li > button", {
   opacity: 1,
   stagger: 0.1,
   duration: 0.5

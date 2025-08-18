@@ -15,7 +15,6 @@ export default class MenuMobile {
     this.menuOpened = false;
     this.openMenu = this.openMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
-    this.addMenuMobileEvents = this.addMenuMobileEvents.bind(this);
   }
 
   isMobile() {
@@ -67,11 +66,48 @@ export default class MenuMobile {
   addMenuMobileEvents() {
     this.menuButton.addEventListener('click', this.openMenu);
     this.menuList.addEventListener('click', (event) => {
-      if (event.target.tagName === 'A') {
+      const target = event.target;
+    
+      // Se clicou em botão de submenu
+      if (target.tagName === "BUTTON" && target.parentElement.classList.contains("has-submenu")) {
+        if (this.isMobile()) {
+          event.preventDefault();
+          target.parentElement.classList.toggle("open");
+        }
+        return; // não fecha o menu
+      }
+    
+      // Se clicou em link normal (<a>), fecha o menu
+      if (target.tagName === "A") {
         this.closeMenu();
       }
     });
+    
   }
+
+  addSubmenuEvents() {
+    const submenuParents = this.menuList.querySelectorAll(".has-submenu > a");
+  
+    submenuParents.forEach(link => {
+      link.addEventListener("click", (e) => {
+        if (this.isMobile()) {
+          e.preventDefault(); // impede ir para o link direto
+          const parentLi = link.parentElement;
+  
+          // Fecha outros submenus antes de abrir o clicado
+          this.menuList.querySelectorAll(".has-submenu").forEach(li => {
+            if (li !== parentLi) {
+              li.classList.remove("open");
+            }
+          });
+  
+          // Alterna o submenu atual
+          parentLi.classList.toggle("open");
+        }
+      });
+    });
+  }
+  
 
   addLinkClickEvents() {
     const links = this.menuList.querySelectorAll('a');
@@ -177,33 +213,14 @@ export default class MenuMobile {
     }
   }
 
-  // init() {
-  //   if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
-  //     this.addMenuMobileEvents();
-  //     this.addLinkClickEvents();
-  //   }
-  //   return this;
-  // }
-
   init() {
     if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents();
-      
-      // Verificação para abrir automaticamente no mobile
-      if (this.isMobile()) {
-        this.menuOpened = true;
-        this.menuList.classList.add(this.activeClass);
-        this.menuButton.classList.add(this.activeClass);
-        this.contatoMobile.classList.add(this.activeClass);
-        this.whatsappMobile.classList.add(this.activeClass);
-        this.instagramMobile.classList.add(this.activeClass);
-        if (this.headerAcoes) this.headerAcoes.classList.add(this.activeClass);
-        this.animateMenuItems();
-        this.toggleMenuAnimation(true);
-        document.body.classList.add('no-scroll');
-      }
+      this.addSubmenuEvents(); // <-- ADICIONA ISSO
     }
     return this;
-  } 
+  }
+  
+  
 }
