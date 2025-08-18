@@ -15,6 +15,7 @@ export default class MenuMobile {
     this.menuOpened = false;
     this.openMenu = this.openMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
+    this.addMenuMobileEvents = this.addMenuMobileEvents.bind(this);
   }
 
   isMobile() {
@@ -40,20 +41,6 @@ export default class MenuMobile {
       }
     }
   }
-
-  // closeMenu() {
-  //   if (this.isMobile()) {
-  //     this.menuOpened = false;
-  //     this.menuList.classList.remove(this.activeClass);
-  //     this.menuButton.classList.remove(this.activeClass);
-  //     this.contatoMobile.classList.remove(this.activeClass);
-  //     this.whatsappMobile.classList.remove(this.activeClass);
-  //     this.instagramMobile.classList.remove(this.activeClass);
-  //     if (this.headerAcoes) this.headerAcoes.classList.remove(this.activeClass); // Remove classe dos botões
-  //     this.toggleMenuAnimation(false);
-  //     document.body.classList.remove('no-scroll');
-  //   }
-  // }
 
   closeMenu() {
     if (this.isMobile()) {
@@ -158,27 +145,6 @@ export default class MenuMobile {
       { opacity: 1, y: 0, duration: 0.5, ease: "power1.out", delay: 0.1 + (menuItems.length + 1) * 0.1 });
   }
 
-  // toggleMenuAnimation(show) {
-  //   const menuList = document.querySelector('.js [data-menu="list"]');
-  //   if (show) {
-  //     gsap.to(menuList, {
-  //       duration: 0.5,
-  //       opacity: 1,
-  //       visibility: 'visible',
-  //       ease: 'power1.inOut',
-  //       onStart: () => menuList.style.display = 'flex'
-  //     });
-  //   } else {
-  //     gsap.to(menuList, {
-  //       duration: 0.5,
-  //       opacity: 0,
-  //       visibility: 'hidden',
-  //       ease: 'power1.inOut',
-  //       onComplete: () => menuList.style.display = 'none'
-  //     });
-  //   }
-  // }
-
   toggleMenuAnimation(show) {
     const menuList = document.querySelector('.js [data-menu="list"]');
     const headerAcoes = this.headerAcoes;
@@ -211,11 +177,33 @@ export default class MenuMobile {
     }
   }
 
+  // init() {
+  //   if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
+  //     this.addMenuMobileEvents();
+  //     this.addLinkClickEvents();
+  //   }
+  //   return this;
+  // }
+
   init() {
     if (this.logoMobile && this.menuButton && this.menuList && this.contatoMobile && this.whatsappMobile && this.instagramMobile) {
       this.addMenuMobileEvents();
       this.addLinkClickEvents();
+      
+      // Verificação para abrir automaticamente no mobile
+      if (this.isMobile()) {
+        this.menuOpened = true;
+        this.menuList.classList.add(this.activeClass);
+        this.menuButton.classList.add(this.activeClass);
+        this.contatoMobile.classList.add(this.activeClass);
+        this.whatsappMobile.classList.add(this.activeClass);
+        this.instagramMobile.classList.add(this.activeClass);
+        if (this.headerAcoes) this.headerAcoes.classList.add(this.activeClass);
+        this.animateMenuItems();
+        this.toggleMenuAnimation(true);
+        document.body.classList.add('no-scroll');
+      }
     }
     return this;
-  }
+  } 
 }
