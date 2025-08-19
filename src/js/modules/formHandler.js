@@ -1,6 +1,7 @@
 export default class FormHandler {
   constructor() {
     this.forms = document.querySelectorAll("form[data-netlify]");
+    this.init();
   }
 
   init() {
