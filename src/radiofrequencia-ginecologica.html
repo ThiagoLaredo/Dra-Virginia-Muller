@@ -170,6 +170,7 @@
 
   <footer id="contato" class="site-footer">
     <div class="container">
+
       <div class="footer-grid agendamento">
         <div  class="footer-col lista-agendamento animate-me animate-up">
           <h3 class="footer-title">Agende sua consulta</h3>
@@ -185,26 +186,26 @@
               rel="noopener"
               class="contato-link"
             >(54) 99130-2992</a>
-          </p>          
+          </p>
           <p>      
             <i class="far fa-envelope"></i>
             <a href="mailto:vrmuller@gmail.com" target="_blank" rel="noopener" class="contato-link">vrmuller@gmail.com</a>
           </p>          
         </div>
-        <div class="footer-col form-agendamento animate-me animate-up">
+        <div class="footer-col form-agendamento animate-me animate-up"> 
           <form class="form-contato" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="contato">
-
+          
             <p style="display:none">
               <label>Não preencha este campo: <input name="bot-field"></label>
             </p>
-
+          
             <div class="form-row">
               <div class="form-group">
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>
               </div>
             </div>
-
+          
             <div class="form-row">
               <div class="form-group">
                 <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
@@ -213,23 +214,18 @@
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
               </div>
             </div>
-
+          
             <div class="form-group">
               <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
             </div>
-
+          
             <button type="submit" class="btn-footer">Enviar</button>
           </form>
-
+          
           <!-- mensagens -->
-          <div class="form-success" style="display:none; margin-top:15px; color:green; font-weight:bold;">
-            Obrigado! Sua mensagem foi enviada com sucesso.
-          </div>
-          <div class="form-error" style="display:none; margin-top:15px; color:red; font-weight:bold;">
-            Ocorreu um erro. Tente novamente mais tarde.
-          </div>
-
-        </div>
+          <div class="form-success">Obrigado! Sua mensagem foi enviada com sucesso.</div>
+          <div class="form-error">Ocorreu um erro. Tente novamente mais tarde.</div>
+        </div>      
       </div>
 
       <div class="footer-grid animate-me animate-up">
@@ -254,7 +250,7 @@
               <p>Centro, Caxias do Sul/RS</p>
               <p>CEP 95034-000</p>
             </a>
-          </address> 
+          </address>          
         </div>
 
         <!-- Coluna 3 - Horários -->
