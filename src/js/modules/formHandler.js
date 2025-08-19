@@ -1,48 +1,51 @@
 export default class FormHandler {
   constructor() {
     this.forms = document.querySelectorAll("form[data-netlify]");
-    this.init();
   }
 
   init() {
     if (!this.forms.length) return;
-    this.forms.forEach((form) => this.handleForm(form));
+    this.forms.forEach((form) => this.bind(form));
   }
 
-  handleForm(form) {
-    const successEl = form.parentElement.querySelector(".form-success");
-    const errorEl = form.parentElement.querySelector(".form-error");
+  bind(form) {
+    const wrapper = form.parentElement;
+    const successEl = wrapper.querySelector(".form-success");
+    const errorEl = wrapper.querySelector(".form-error");
 
-    // Esconde mensagens no início
-    successEl.style.display = "none";
-    errorEl.style.display = "none";
+    if (successEl) successEl.style.display = "none";
+    if (errorEl) errorEl.style.display = "none";
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      // feedback inicial
-      successEl.style.display = "none";
-      errorEl.style.display = "none";
+      if (successEl) successEl.style.display = "none";
+      if (errorEl) errorEl.style.display = "none";
 
-      const formData = new FormData(form);
+      const data = new FormData(form);
+
+      // garante que form-name vai junto
+      if (!data.has("form-name")) {
+        data.append("form-name", form.getAttribute("name") || "contato");
+      }
 
       try {
         const response = await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString(),
+          body: new URLSearchParams(data).toString(),
         });
 
+        // 🚀 Importante: Netlify responde 200 ou 303 → a gente trata ambos como sucesso
         if (response.ok) {
           form.reset();
-          successEl.style.display = "block";
-          errorEl.style.display = "none";
+          if (successEl) successEl.style.display = "block";
         } else {
-          throw new Error("Erro no envio");
+          throw new Error(`Resposta inesperada: ${response.status}`);
         }
-      } catch (error) {
-        successEl.style.display = "none";
-        errorEl.style.display = "block";
+      } catch (err) {
+        if (errorEl) errorEl.style.display = "block";
+        console.error("Erro no envio do formulário:", err);
       }
     });
   }
