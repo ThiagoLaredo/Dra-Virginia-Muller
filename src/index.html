@@ -208,27 +208,30 @@
           </p>          
         </div>
         <div class="footer-col form-agendamento animate-me animate-up">
-          <form class="form-contato" action="#" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" id="nome" name="nome" placeholder="Nome" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
-              </div>
-              <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="E-mail" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
-            </div>
-            <button type="submit" class="btn-footer">Enviar</button>
-          </form>       
+          <form name="contact" method="POST" data-netlify="true" class="form">
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <label>
+              Nome:
+              <input type="text" name="name" required>
+            </label>
+          
+            <label>
+              Email:
+              <input type="email" name="email" required>
+            </label>
+          
+            <label>
+              Mensagem:
+              <textarea name="message" required></textarea>
+            </label>
+          
+            <button type="submit">Enviar</button>
+          
+            <!-- Aqui aparecerão as mensagens -->
+            <div class="form-message" style="display: none;"></div>
+          </form>
         </div>
-
       </div>
 
       <div class="footer-grid animate-me animate-up">
