@@ -1,36 +1,21 @@
-#contactThankYouMessage, #newsletterThankYouMessage  {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px
-} 
+.form-success,
+.form-error {
+  display: none;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 10px;
+  border-radius: 6px;
+}
 
-#contactThankYouMessage h3, #newsletterThankYouMessage h3 {
-    font: 600 1.6rem 'Space Grotesk', sans-serif;
-    color: var(--textwhite);
-    text-align: left;
-    margin-bottom: 10px;
-} 
+.form-success {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
 
-#contactThankYouMessage p, #newsletterThankYouMessage p {
-    font: 300 1.2rem/1.4 'Space Grotesk', sans-serif;
-    color: var(--textwhite);
-    text-align: left;
-    margin-bottom: 20px;
-} 
-
-@media (max-width: 768px) {
-
-    #contactThankYouMessage h3, #newsletterThankYouMessage h3, #contactThankYouMessage p, #newsletterThankYouMessage p {
-        text-align: center;
-    } 
-    
-
-    #contactThankYouMessage, #newsletterThankYouMessage  {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px
-    } 
+.form-error {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
 }

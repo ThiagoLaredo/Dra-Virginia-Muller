@@ -1,6 +1,6 @@
 export default class FormHandler {
   constructor() {
-    this.forms = document.querySelectorAll("form[netlify]");
+    this.forms = document.querySelectorAll("form[data-netlify]");
     this.init();
   }
 
@@ -10,17 +10,23 @@ export default class FormHandler {
   }
 
   handleForm(form) {
-    const messageEl = form.querySelector(".form-message");
+    const successEl = form.parentElement.querySelector(".form-success");
+    const errorEl = form.parentElement.querySelector(".form-error");
+
+    // Esconde mensagens no início
+    successEl.style.display = "none";
+    errorEl.style.display = "none";
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      messageEl.textContent = "Enviando...";
-      messageEl.style.color = "#333";
+      // feedback inicial
+      successEl.style.display = "none";
+      errorEl.style.display = "none";
+
+      const formData = new FormData(form);
 
       try {
-        const formData = new FormData(form);
-
         const response = await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -29,15 +35,14 @@ export default class FormHandler {
 
         if (response.ok) {
           form.reset();
-          messageEl.textContent = "✅ Obrigado! Sua mensagem foi enviada.";
-          messageEl.style.color = "green";
+          successEl.style.display = "block";
+          errorEl.style.display = "none";
         } else {
-          throw new Error("Erro na resposta do servidor");
+          throw new Error("Erro no envio");
         }
       } catch (error) {
-        messageEl.textContent =
-          "❌ Ocorreu um erro. Tente novamente mais tarde.";
-        messageEl.style.color = "red";
+        successEl.style.display = "none";
+        errorEl.style.display = "block";
       }
     });
   }
