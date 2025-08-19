@@ -18,18 +18,17 @@ export default class FormHandler {
     if (errorEl) errorEl.style.display = "none";
 
     form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+      e.preventDefault(); // ✋ impede comportamento padrão Netlify
 
       if (successEl) successEl.style.display = "none";
       if (errorEl) errorEl.style.display = "none";
 
       const data = new FormData(form);
-
-      // garante que form-name vai junto
       if (!data.has("form-name")) {
         data.append("form-name", form.getAttribute("name") || "contato");
       }
 
+      // Envia para o endpoint do Netlify usando fetch (AJAX)
       try {
         const response = await fetch("/", {
           method: "POST",
@@ -37,12 +36,11 @@ export default class FormHandler {
           body: new URLSearchParams(data).toString(),
         });
 
-        // 🚀 Importante: Netlify responde 200 ou 303 → a gente trata ambos como sucesso
-        if (response.ok) {
+        if (response.status === 200 || response.status === 204) {
           form.reset();
           if (successEl) successEl.style.display = "block";
         } else {
-          throw new Error(`Resposta inesperada: ${response.status}`);
+          throw new Error(`Erro: ${response.status}`);
         }
       } catch (err) {
         if (errorEl) errorEl.style.display = "block";
