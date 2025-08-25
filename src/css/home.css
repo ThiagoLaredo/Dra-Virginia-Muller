@@ -122,6 +122,12 @@ visibility: hidden;
   min-height: 100%; /* Garantir altura igual */
 }
 
+/* Forçar o último card a ocupar 2 colunas */
+.area-card-button {
+  grid-column: 1 / -1; /* ocupa de 1 até o fim */
+  text-align: center;  /* centraliza o botão */
+}
+
 .area-card h3 {
   line-height: 1.2;
   margin-bottom: 0.5rem;

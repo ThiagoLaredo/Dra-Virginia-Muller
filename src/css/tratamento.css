@@ -26,13 +26,13 @@
 .tratamento-content {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     flex: 1;
 }
 
 .tratamento-content .destaque {
     font-size: 1.4rem;
-    line-height: 1.6;
+    line-height: 1.5;
     font-weight: 600;
     color: #cebd85;
     margin-bottom: .5rem;
@@ -95,6 +95,7 @@
     line-height: 1.6;
     font-weight: 500;
     color: var(--primary);
+    margin-bottom: 1rem;
 }
 
 .tratamento-image {

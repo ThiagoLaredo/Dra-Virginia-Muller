@@ -20,6 +20,7 @@ const pages = [
   'sobre',
   'clinica',
   'incontinencia-urinaria',
+  'spectra',
   'midia'
 ];
 
