@@ -107,6 +107,12 @@
     align-items: center;
 }
 
+.tratamento-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 768px) {
     /* Título da página */
     .sobre-pg-title {
