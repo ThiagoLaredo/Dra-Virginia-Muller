@@ -21,7 +21,8 @@ const pages = [
   'clinica',
   'incontinencia-urinaria',
   'spectra',
-  'midia'
+  'midia',
+  'obrigado'
 ];
 
 // Entradas dinâmicas

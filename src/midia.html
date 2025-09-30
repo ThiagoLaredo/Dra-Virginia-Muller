@@ -14,9 +14,9 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Dra. Virgínia Müller | Urologia com excelência, inovação e cuidado personalizado">
     <meta property="og:description" content="Referência em urologia para homens e mulheres. Tratamentos com tecnologia de ponta, cirurgias robóticas, laser íntimo e urodinâmica com olhar individualizado.">
-    <meta property="og:url" content="https://www.dravirginiamuller.com/">
+    <meta property="og:url" content="https://www.virginiamuller.com/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.dravirginiamuller.com/imgs/virginia-facebook.jpg">
+    <meta property="og:image" content="https://www.virginiamuller.com/imgs/virginia-facebook.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dra. Virgínia Müller | Urologia com excelência, inovação e cuidado personalizado">
     <meta name="twitter:description" content="Referência em urologia para homens e mulheres. Tratamentos com tecnologia de ponta, cirurgias robóticas, laser íntimo e urodinâmica com olhar individualizado.">
-    <meta name="twitter:image" content="https://www.dravirginiamuller.com/imgs/virginia-facebook.jpg">
+    <meta name="twitter:image" content="https://www.virginiamuller.com/imgs/virginia-facebook.jpg">
 
 
     <!-- Preconnect to Google Fonts for faster font loading -->
@@ -158,21 +158,19 @@
           </p>          
         </div>
         <div class="footer-col form-agendamento animate-me animate-up"> 
-          <form class="form-contato" name="contato" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <!-- campo oculto obrigatório para Netlify -->
-            <input type="hidden" name="form-name" value="contato">
-        
-            <!-- honeypot anti-spam -->
-            <p style="display:none">
-              <label>Não preencha este campo: <input name="bot-field"></label>
-            </p>
-        
+          <form class="form-contato" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Sua access key do Web3Forms -->
+            <input type="hidden" name="access_key" value="1627de14-d89e-41c0-b9a2-1a578277edcc">
+          
+            <!-- Redirecionamento após envio -->
+            <input type="hidden" name="redirect" value="https://virginiamuller.com/obrigado.html">
+          
             <div class="form-row">
               <div class="form-group">
                 <input type="text" id="nome" name="nome" placeholder="Nome" required>
               </div>
             </div>
-        
+          
             <div class="form-row">
               <div class="form-group">
                 <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
@@ -181,11 +179,11 @@
                 <input type="email" id="email" name="email" placeholder="E-mail" required>
               </div>
             </div>
-        
+          
             <div class="form-group">
               <textarea id="mensagem" name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
             </div>
-        
+          
             <button type="submit" class="btn-footer">Enviar</button>
           </form>
         

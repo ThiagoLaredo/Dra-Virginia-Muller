@@ -10,7 +10,6 @@ import ScrollToSection from '../modules/ScrollToSection.js';
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderManager from '../modules/HeaderManager.js';
 import HeaderScroll from '../modules/header-scroll.js';
-import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations, initTypewriterAnimations } from '../modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -92,5 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
     initPageOpenAnimations();
     initScrollAnimations();
     initTypewriterAnimations();
-    new FormHandler();
 });

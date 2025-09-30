@@ -11,7 +11,6 @@ import ScrollToSection from '../modules/ScrollToSection.js';
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderManager from '../modules/HeaderManager.js';
 import HeaderScroll from '../modules/header-scroll.js';
-import FormHandler from '../modules/formHandler.js';
 import { initPageOpenAnimations, initScrollAnimations, initTypewriterAnimations } from '../modules/animations.js';
 import SwiperClinicaSlider from '../modules/SwiperClinicaSlider.js';
 
@@ -94,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initPageOpenAnimations();
     initScrollAnimations();
     initTypewriterAnimations();
-    new FormHandler();
 
     const swiperEl = document.querySelector('.agents-swiper');
     if (swiperEl) {

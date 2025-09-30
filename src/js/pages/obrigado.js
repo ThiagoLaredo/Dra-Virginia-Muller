@@ -1,5 +1,5 @@
 import "../../css/global.css";
-import "../../css/midia.css";
+import "../../css/obrigado.css";
 import "../../css/header.css";
 import "../../css/footer.css";
 import "../../css/menu-mobile.css";
@@ -90,4 +90,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restante do seu código existente...
     initPageOpenAnimations();
     initScrollAnimations();
+
 });

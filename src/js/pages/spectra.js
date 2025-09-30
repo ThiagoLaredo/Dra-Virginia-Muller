@@ -10,8 +10,7 @@ import ScrollToSection from '../modules/ScrollToSection.js';
 import MenuMobile from '../modules/menu-mobile.js';
 import HeaderManager from '../modules/HeaderManager.js';
 import HeaderScroll from '../modules/header-scroll.js';
-import FormHandler from '../modules/formHandler.js';
-import { initPageOpenAnimations, initScrollAnimations, initTypewriterAnimations } from '../modules/animations.js';
+import { initPageOpenAnimations, initScrollAnimations } from '../modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("DOM completamente carregado.");
@@ -91,6 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Restante do seu código existente...
     initPageOpenAnimations();
     initScrollAnimations();
-    initTypewriterAnimations();
-    new FormHandler();
 });
